@@ -1,0 +1,59 @@
+package housedata;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class ChangeData {
+
+	public static void main(String[] args) throws IOException {
+		FileReader input = new FileReader("C:/Users/Megan/Documents/COSC 310/House Data/2015 Property Data.csv");
+		BufferedReader in = new BufferedReader(input);
+		FileWriter output = new FileWriter("C:/Users/Megan/Documents/COSC 310/House Data/2015 Property Data Fixed.csv");
+		BufferedWriter out = new BufferedWriter(output);
+		String[][] data = new String[2000000][8];
+		int count = -1;
+		int numoflines = 0;
+		while (in.ready() == true) {
+			count++;
+			numoflines++;
+			String line = in.readLine();
+			String[] lines = line.split(",");
+			for (int i = 0; i < lines.length; i++) {
+				data[count][i] = lines[i];
+			}
+
+		}
+		int i = 0;
+		while (i < numoflines) {
+			if (data[i][0].equals("STRATA")) {
+				char[] sizeCheck = data[i][1].toCharArray();
+				if (sizeCheck.length <= 1) {
+					data[i][0] = "CONDO";
+				}
+			}
+			i++;
+		}
+		int newcount = 0;
+		while (newcount < numoflines) {
+			String write = "";
+			char[] sizeCheck = data[newcount][7].toCharArray();
+			if (sizeCheck.length > 5 && !data[newcount][0].equals("OTHER") && !data[newcount][3].equals("VACANT")
+					&& !data[newcount][3].equals("") & !data[newcount][2].equals("")) {
+				for (int j = 0; j < data[newcount].length; j++) {
+					write = write + data[newcount][j] + ",";
+				}
+				out.write(write);
+				out.newLine();
+			}
+			newcount++;
+		}
+
+		in.close();
+		out.close();
+
+	}
+
+}
