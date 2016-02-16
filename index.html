@@ -42,6 +42,18 @@ Released   : 20111121
 					</div>
 					<div style="clear: both;">&nbsp;</div>
 				</div>
+				<div id="map"></div>
+    <script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat: 44.540, lng: -78.546},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer></script>
 				<!-- end #content -->
 				<div id="sidebar">
 					<ul>
@@ -105,17 +117,6 @@ Released   : 20111121
 									<input type="checkbox" checked = "True" name="Assault" value="Assualt">Assault<br>
 									<input type="checkbox" checked = "True" name="Harrasment" value="Harrasment">Harrasment<br>  
 								</form>
-							</ul>
-						</li>
-						<li>
-							<h2>Links</h2>
-							<ul>
-								<li><a href="#">Aliquam libero</a></li>
-								<li><a href="#">Consectetuer adipiscing elit</a></li>
-								<li><a href="#">Metus aliquam pellentesque</a></li>
-								<li><a href="#">Suspendisse iaculis mauris</a></li>
-								<li><a href="#">Urnanet non molestie semper</a></li>
-								<li><a href="#">Proin gravida orci porttitor</a></li>
 							</ul>
 						</li>
 					</ul>
