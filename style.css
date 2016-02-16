@@ -401,3 +401,8 @@ img.aligncenter {
 #footer a {
 	color: #8F8F8F;
 }
+
+#map {
+        width: 500px;
+        height: 400px;
+      }
