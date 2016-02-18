@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Vancouver Crime Map</title>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css' />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#">Vancouver Crime Map</a></h1>
+			</div>
+		</div>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						<h2 class="title"><a href="#">CrimeMap</a></h2>
+						<div class="entry">
+							<div id="map"></div>
+    								<script>
+      									function initMap()
+									{
+       								 	var mapDiv = document.getElementById('map');
+        								var map = new google.maps.Map(mapDiv, {center: {lat: 49.2827, lng: -123.1207}, zoom: 11 });
+      									}
+    								</script>
+    								<script src="https://maps.googleapis.com/maps/api/js?key = AIzaSyAxhaBWFeRyn_rLmPbAOfZt2D6wMWseHLY&callback=initMap">"
+        							async defer></script>
+							</div>
+						</div>
+				<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>Description/Insturctions</h2>
+							<p>Use the map correctly</p>
+						</li>
+						<li>
+							<h2>Search Box</h2>
+							<ul>
+								<form>
+  									<input type="text" name="searchBar" style="width: 300px;"><br>
+									<input type="submit" value="Submit">
+								</form>
+							</ul>
+						</li>
+						<li>
+							<h2>Date</h2>
+							<ul>
+								<p>Year</p>
+								<select>
+  									<option selected hidden>Choose a Year</option>
+  									<option value="2015">2015</option>
+											<script type = "text/javascript" src = "2015Fetch.js"></script>
+  									<option value="2014">2014</option>
+											<script type = "text/javascript" src = "2014Fetch.js"></script>
+  									<option value="2013">2013</option>
+											<script type = "text/javascript" src = "2013Fetch.js"></script>
+  									<option value="2012">2012</option>
+											<script type = "text/javascript" src = "2012Fetch.js"></script>
+										<option value="2011">2011</option>
+											<script type = "text/javascript" src = "2011Fetch.js"></script>
+										<option value="2010">2010</option>
+											<script type = "text/javascript" src = "2010Fetch.js"></script>
+										<option value="2009">2009</option>
+											<script type = "text/javascript" src = "2009Fetch.js"></script>
+										<option value="2008">2008</option>
+											<script type = "text/javascript" src = "2008Fetch.js"></script>
+										<option value="2007">2007</option>
+											<script type = "text/javascript" src = "2007Fetch.js"></script>
+										<option value="2006">2006</option>
+											<script type = "text/javascript" src = "2006Fetch.js"></script>
+										<option value="2005">2005</option>
+											<script type = "text/javascript" src = "2005Fetch.js"></script>
+										<option value="2004">2004</option>
+											<script type = "text/javascript" src = "2004Fetch.js"></script>
+										<option value="2003">2003</option>
+											<script type = "text/javascript" src = "2003Fetch.js"></script>
+								</select>
+								<p>Month</p>
+								<select>
+  									<option selected >Choose a Month</option>
+  									<option value="Jan">Jan</option>
+										<script type = "text/javascript" src = "JanFetch.js"></script>
+  									<option value="Feb">Feb</option>
+										<script type = "text/javascript" src = "FebFetch.js"></script>
+  									<option value="Mar">Mar</option>
+										<script type = "text/javascript" src = "MarFetch.js"></script>
+  									<option value="Apr">Apr</option>
+										<script type = "text/javascript" src = "AprilFetch.js"></script>
+									<option value="May">May</option>
+										<script type = "text/javascript" src = "MayFetch.js"></script>
+									<option value="Jun">Jun</option>
+										<script type = "text/javascript" src = "JuneFetch.js"></script>
+									<option value="Jul">Jul</option>
+										<script type = "text/javascript" src = "JulyFetch.js"></script>
+									<option value="Aug">Aug</option>
+										<script type = "text/javascript" src = "AugustFetch.js"></script>
+									<option value="Sep">Sep</option>
+										<script type = "text/javascript" src = "September.js"></script>
+									<option value="Oct">Oct</option>
+										<script type = "text/javascript" src = "OctoberFetch.js"></script>
+									<option value="Nov">Nov</option>
+										<script type = "text/javascript" src = "NovemberFetch.js"></script>
+									<option value="Dec">Dec</option>
+										<script type = "text/javascript" src = "DecemberFetch.js"></script>
+								</select>
+							</ul>
+						</li>
+						<li>
+							<h2>Crimes</h2>
+							<ul>
+								<form action="">
+									<input type="checkbox" checked = "True" name="bnecom" value="bnecom">BNE Commercial<br>
+									<input type="checkbox" checked = "True" name="bneres" value="bneres">BNE Residential/Other<br>
+									<input type="checkbox" checked = "True" name="mschf" value="mschf">Mischief<br>
+									<input type="checkbox" checked = "True" name="ot" value="ot">Other Theft<br>
+									<input type="checkbox" checked = "True" name="tfv" value="tfv">Theft from Vehicle<br>
+									<input type="checkbox" checked = "True" name="tov" value="tov">Theft of Vehicle<br>
+								</form>
+								</form>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+</div>
+<!-- end #footer -->
+</body>
+</html>
