@@ -33,14 +33,22 @@ Released   : 20111121
 			<div id="page-bgbtm">
 				<div id="content">
 					<div class="post">
-						<h2 class="title"><a href="#">Welcome to Escalate</a></h2>
-						<p class="meta">Posted by <a href="#">Someone</a> on July 08, 2013
-							&nbsp;&bull;&nbsp; <a href="#" class="comments">Comments (64)</a> &nbsp;&bull;&nbsp; <a href="#" class="permalink">Full article</a></p>
-						<div class="entry"> <a href="#" class="image image-full"><img src="images/pics01.jpg" alt="" /></a>
-							<p>This is <strong>Escalate</strong>, a free, fully standards-compliant CSS template designed by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. The photos in this template are from <a href="http://fotogrph.com/"> Fotogrph</a>. This free template is released under the <a href="http://templated.co/license">Creative Commons Attribution</a> license, so you're pretty much free to do whatever you want with it (even use it commercially) provided you give us credit for it. Have fun :) </p>
+						<h2 class="title"><a href="#">CrimeMap</a></h2>
+						<div class="entry">
+							<div id="map"></div>
+    								<script>
+      									function initMap() {
+       								 	var mapDiv = document.getElementById('map');
+        								var map = new google.maps.Map(mapDiv, {
+          								center: {lat: 49.2827, lng: -123.1207},
+          								zoom: 11 });
+      									}
+    								</script>
+    								<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        							async defer></script>
+							</div>
 						</div>
-					</div>
-					<div style="clear: both;">&nbsp;</div>
+				<div style="clear: both;">&nbsp;</div>
 				</div>
 				<div id="map"></div>
     <script>
