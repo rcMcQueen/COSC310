@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!--
+http://templated.co
+Released for free under the Creative Commons Attribution License
+
+Name       : Escalate   
+Description: A two-column, fixed-width design with dark color scheme.
+Version    : 1.0
+Released   : 20111121
+
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Escalate by TEMPLATED</title>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css' />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#">Vancouver Crime Map</a></h1>
+			</div>
+		</div>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						<h2 class="title"><a href="#">CrimeMap</a></h2>
+						<div class="entry">
+							<div id="map"></div>
+    								<script>
+      									function initMap() {
+       								 	var mapDiv = document.getElementById('map');
+        								var map = new google.maps.Map(mapDiv, {
+          								center: {lat: 49.2827, lng: -123.1207},
+          								zoom: 11 });
+      									}
+    								</script>
+    								<script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        							async defer></script>
+							</div>
+						</div>
+				<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+							<h2>Description/Insturctions</h2>
+							<p>Use the map correctly</p>
+						</li>
+						<li>
+							<h2>Search Box</h2>
+							<ul>
+								<form>
+  									<input type="text" name="searchBar" style="width: 300px;"><br>
+									<input type="submit" value="Submit">
+								</form>
+							</ul>
+						</li>
+						<li>
+							<h2>Date</h2>
+							<ul>
+								<p>Year</p>
+								<select>
+  									<option value="2003">2003</option>
+  									<option value="2004">2004</option>
+  									<option value="2005">2005</option>
+  									<option value="2006">2006</option>
+									<option value="2007">2007</option>
+									<option value="2008">2008</option>
+									<option value="2009">2009</option>
+									<option value="2010">2010</option>
+									<option value="2011">2011</option>
+									<option value="2012">2012</option>
+									<option value="2013">2013</option>
+									<option value="2014">2014</option>
+									<option selected value="2015">2015</option>
+								</select>
+								<p>Month</p>
+								<select>
+  									<option value="N/A">N/A</option>
+  									<option value="Jan">Jan</option>
+  									<option value="Feb">Feb</option>
+  									<option value="Mar">Mar</option>
+  									<option value="Apr">Apr</option>
+									<option value="May">May</option>
+									<option value="Jun">Jun</option>
+									<option value="Jul">Jul</option>
+									<option value="Aug">Aug</option>
+									<option value="Sep">Sep</option>
+									<option value="Oct">Oct</option>
+									<option value="Nov">Nov</option>
+									<option value="Dec">Dec</option>
+								</select>
+							</ul>
+						</li>
+						<li>
+							<h2>Crimes</h2>
+							<ul>
+								<form action="">
+									<input type="checkbox" checked = "True" name="Theft" value="Theft">Theft<br>
+									<input type="checkbox" checked = "True" name="Robbery" value="Robbery">Robbery<br> 
+									<input type="checkbox" checked = "True" name="Vandalism" value="Vandalism">Vandalism<br>
+									<input type="checkbox" checked = "True" name="Assault" value="Assualt">Assault<br>
+									<input type="checkbox" checked = "True" name="Harrasment" value="Harrasment">Harrasment<br>  
+								</form>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page --> 
+</div>
+<div id="footer">
+	<p>&copy; Untitled. All rights reserved. | Photos by <a href="http://fotogrph.com/">Fotogrph</a> | Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>
