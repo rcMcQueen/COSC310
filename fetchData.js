@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(document).ready(function() {
     $('#year').change(function () {
         //get the value of the selection within the Year selections
@@ -15,5 +16,20 @@ $(document).ready(function() {
                 }
 
             });
+=======
+$(document).ready(function(){
+    $('#year').click(function() {
+        $.ajax({
+            type: 'GET',
+            url: 'http://localhost:8888/',
+            dataType: 'json',
+            success: function () {
+
+            },
+            error: function(data){
+                console.log("Error.", data);
+            }
+        });
+>>>>>>> master
     });
 });
