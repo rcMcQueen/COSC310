@@ -59,4 +59,31 @@ $(document).ready(function()
 
            });
 	});
+
+	$('#crime').change(function () 
+	{
+        	if($('#(bnecom).is(":checked"))
+		{
+        	$.ajax
+		({
+		//Ryan Edit this part with specific database commands for true
+                type: 'GET',
+                url: 'http://localhost:8888/monthQuery/' + month,
+                useDefaultHxrHeader: false,
+                dataType: 'json',
+		})
+		}
+		else
+		{
+        	$.ajax
+		({
+		//Ryan Edit this part with specific database commands for false
+                type: 'GET',
+                url: 'http://localhost:8888/monthQuery/' + month,
+                useDefaultHxrHeader: false,
+                dataType: 'json',
+		})
+		}
+
+           });
 });
