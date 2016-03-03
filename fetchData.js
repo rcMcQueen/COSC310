@@ -1,22 +1,28 @@
-$(document).ready(function() {
-	$('#year').change(function() {
-		// get the value of the selection within the Year selections
-		var year = $('#year option:selected').val();
-		$.ajax({
-			type : 'GET',
-			url : 'http://localhost:8888/yearQuery/' + year,
-			useDefaultHxrHeader : false,
-			dataType : 'json',
-			success : function() {
-				console.log("Success");
-			},
-			error : function(data) {
-				console.log("Error.", data);
-			}
+$(document).ready(function() 
+{
+    $('#year').change(function () 
+	{
+        //get the value of the selection within the Year selections
+        var year = $('#year option:selected').val();
+        $.ajax
+	({
+                type: 'GET',
+                url: 'http://localhost:8888/yearQuery/' + year,
+                useDefaultHxrHeader: false,
+                dataType: 'json',
+                success: function () 
+		{
+                    console.log("Success");
+                },
+                error: function (data) 
+		{
+                    console.log("Error.", data);
+                }
 
-		});
+           });
+	});
 
-		$(document).ready(function() {
+	$(document).ready(function() {
 			$('#year').click(function() {
 				$.ajax({
 					type : 'GET',
@@ -31,5 +37,26 @@ $(document).ready(function() {
 				});
 			});
 		});
+
+    $('#month').change(function () 
+	{
+        //get the value of the selection within the month selections
+        var month = $('#month option:selected').val();
+        $.ajax
+	({
+                type: 'GET',
+                url: 'http://localhost:8888/monthQuery/' + month,
+                useDefaultHxrHeader: false,
+                dataType: 'json',
+                success: function () 
+		{
+                    console.log("Success");
+                },
+                error: function (data) 
+		{
+                    console.log("Error.", data);
+                }
+
+           });
 	});
 });
