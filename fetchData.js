@@ -165,7 +165,7 @@ $(document).ready(function(){
                 });
             }
         }); 
-    });
+
 
 $(document).ready(function(){
             if($(tov).is(":checked")) { 
@@ -188,7 +188,6 @@ $(document).ready(function(){
                 });
             }
         }); 
-    });
 
 $(document).ready(function(){
             if($(armrob).is(":checked")) { 
@@ -211,7 +210,6 @@ $(document).ready(function(){
                 });
             }
         }); 
-    });
 
 $(document).ready(function(){
             if($(van).is(":checked")) { 
@@ -234,7 +232,7 @@ $(document).ready(function(){
                 });
             }
         }); 
-    });
+ 
 
 $(document).ready(function(){
             if($(aslt).is(":checked")) { 
@@ -257,7 +255,7 @@ $(document).ready(function(){
                 });
             }
         }); 
-    });
+
 
 $(document).ready(function(){
             if($(dmvlnc).is(":checked")) { 
@@ -280,6 +278,6 @@ $(document).ready(function(){
                 });
             }
         }); 
-    });
+
 
 //end of checkbox functions
