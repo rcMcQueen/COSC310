@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 $(document).ready(function() {
     $('#year').change(function () {
         //get the value of the selection within the Year selections
@@ -16,7 +15,6 @@ $(document).ready(function() {
                 }
 
             });
-=======
 $(document).ready(function(){
     $('#year').click(function() {
         $.ajax({
@@ -30,6 +28,240 @@ $(document).ready(function(){
                 console.log("Error.", data);
             }
         });
->>>>>>> master
     });
 });
+
+// Checkbox calls below, need database instructions
+
+$(document).ready(function(){
+            if($(bnecom).is(":checked")) { 
+                $.ajax({
+		//Database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"1" }
+
+                });
+            } else {
+                $.ajax({
+		//database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"0" }
+
+                });
+            }
+        }); 
+    });
+
+$(document).ready(function(){
+            if($(bneres).is(":checked")) { 
+                $.ajax({
+		//Database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"1" }
+
+                });
+            } else {
+                $.ajax({
+		//database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"0" }
+
+                });
+            }
+        }); 
+    });
+
+
+$(document).ready(function(){
+            if($(mschf).is(":checked")) { 
+                $.ajax({
+		//Database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"1" }
+
+                });
+            } else {
+                $.ajax({
+		//database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"0" }
+
+                });
+            }
+        }); 
+    });
+
+$(document).ready(function(){
+            if($(ot).is(":checked")) { 
+                $.ajax({
+		//Database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"1" }
+
+                });
+            } else {
+                $.ajax({
+		//database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"0" }
+
+                });
+            }
+        }); 
+    });
+
+$(document).ready(function(){
+            if($(tfv).is(":checked")) { 
+                $.ajax({
+		//Database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"1" }
+
+                });
+            } else {
+                $.ajax({
+		//database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"0" }
+
+                });
+            }
+        }); 
+    });
+
+$(document).ready(function(){
+            if($(tov).is(":checked")) { 
+                $.ajax({
+		//Database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"1" }
+
+                });
+            } else {
+                $.ajax({
+		//database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"0" }
+
+                });
+            }
+        }); 
+    });
+
+$(document).ready(function(){
+            if($(armrob).is(":checked")) { 
+                $.ajax({
+		//Database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"1" }
+
+                });
+            } else {
+                $.ajax({
+		//database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"0" }
+
+                });
+            }
+        }); 
+    });
+
+$(document).ready(function(){
+            if($(van).is(":checked")) { 
+                $.ajax({
+		//Database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"1" }
+
+                });
+            } else {
+                $.ajax({
+		//database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"0" }
+
+                });
+            }
+        }); 
+    });
+
+$(document).ready(function(){
+            if($(aslt).is(":checked")) { 
+                $.ajax({
+		//Database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"1" }
+
+                });
+            } else {
+                $.ajax({
+		//database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"0" }
+
+                });
+            }
+        }); 
+    });
+
+$(document).ready(function(){
+            if($(dmvlnc).is(":checked")) { 
+                $.ajax({
+		//Database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"1" }
+
+                });
+            } else {
+                $.ajax({
+		//database stuff here
+
+                    url: 'on_off.aspx',
+                    type: 'POST',
+                    data: { strID:$(this).attr("id"), strState:"0" }
+
+                });
+            }
+        }); 
+    });
+
+//end of checkbox functions
