@@ -235,8 +235,10 @@ a:hover {
 
 .post .entry {
 	text-align: justify;
-	margin-bottom: 25px;
-	padding: 10px 0px 0px 0px;
+	margin-bottom: 10px;
+	padding: 5px 0px 5px 0px;
+	hight: 700px;
+	width: 550;
 }
 
 .links {
@@ -255,7 +257,7 @@ a:hover {
 #sidebar {
 	float: right;
 	width: 280px;
-	padding: 0px 0px 0px 0px;
+	padding: 2px 0px 0px 0px;
 }
 
 #sidebar ul {
@@ -271,7 +273,7 @@ a:hover {
 
 #sidebar li ul {
 	margin: 0px 0px;
-	padding-bottom: 30px;
+	padding-bottom: 15px;
 }
 
 #sidebar li li {
@@ -351,6 +353,6 @@ a:hover {
 }
 
 #map {
-	width: 700px;
-	height: 400px;
+	width: 710px;
+	height: 550px;
 }
