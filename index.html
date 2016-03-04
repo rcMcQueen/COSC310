@@ -4,38 +4,31 @@
 <meta name="description" content="" />
 <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 <title>Vancouver Crime Map</title>
-<link
-	href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600'
-	rel='stylesheet' type='text/css' />
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css' />
 <link href="style.css" rel="stylesheet" type="text/css" media="screen" />
 </head>
 <body>
-	<div id="wrapper">
-		<div id="header-wrapper">
-			<div id="header">
-				<div id="logo">
-					<h1>
-						<a href="#">Vancouver Crime Map</a>
-					</h1>
-				</div>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#">Vancouver Crime Map</a></h1>
 			</div>
 		</div>
-		<!-- end #menu -->
-		<div id="page">
-			<div id="page-bgtop">
-				<div id="page-bgbtm">
-					<div id="content">
-						<div class="post">
-							<h2 class="title">
-								<a href="#">CrimeMap</a>
-							</h2>
-							<div class="entry">
-								<div id="map"></div>
-								<script src="mapGen.js"></script>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						<h2 class="title"><a href="#">CrimeMap</a></h2>
+						<div class="entry">
+							<div id="map"></div>
+    								<script src = "mapGen.js"></script>
 
 							</div>
 						</div>
-<<<<<<< HEAD
 				<div style="clear: both;">&nbsp;</div>
 				</div>
 				<!-- end #content -->
@@ -128,110 +121,19 @@
 					</ul>
 					
 					</div>
-=======
-						<div style="clear: both;">&nbsp;</div>
-					</div>
-					<!-- end #content -->
-					<div id="sidebar">
-						<ul>
-							<li>
-								<h2>Description/Insturctions</h2>
-								<p>Use the map correctly</p>
-							</li>
-							<li>
-								<h2>Search Address</h2>
-								<ul>
-									<form>
-										<input id="#addressSearch" type="text" name="searchBar"
-											style="width: 300px;"><br> <input type="submit"
-											value="Submit" onclick=getAddress()>
-									</form>
-								</ul>
-							</li>
-							<li>
-								<h2>Date</h2>
-								<ul>
-									<p>Year</p>
-									<select id="year">
-										<option value="yr" selected>Choose a Year</option>
-										<option value="fifteen">2015</option>
-										<option value="fourteen">2014</option>
-										<option value="thirteen">2013</option>
-										<option value="twelve">2012</option>
-										<option value="eleven">2011</option>
-										<option value="ten">2010</option>
-										<option value="nine">2009</option>
-										<option value="eight">2008</option>
-										<option value="seven">2007</option>
-										<option value="six">2006</option>
-										<option value="five">2005</option>
-										<option value="four">2004</option>
-										<option value="three">2003</option>
-
-									</select>
-
-									<p>Month</p>
-
-									<select id = "month">
-										<option selected>Choose a Month</option>
-										<option value="Jan">Jan</option>
-
-										<option value="Feb">Feb</option>
-
-										<option value="Mar">Mar</option>
-
-										<option value="Apr">Apr</option>
-
-										<option value="May">May</option>
-
-										<option value="Jun">Jun</option>
-
-										<option value="Jul">Jul</option>
-
-										<option value="Aug">Aug</option>
-
-										<option value="Sep">Sep</option>
-
-										<option value="Oct">Oct</option>
-
-										<option value="Nov">Nov</option>
-
-										<option value="Dec">Dec</option>
-
-									</select>
-								</ul>
-							</li>
-							<li>
-								<h2>Crimes</h2>
-								<ul>
-									<form action="" id = "crimes">
-										<input type="checkbox" checked="True" name="bnecom" value="bnecom">BNE Commercial<br> 
-										<input type="checkbox" checked="True" name="bneres" value="bneres">BNE Residential/Other<br> 
-										<input type="checkbox" checked="True" name="mschf" value="mschf">Mischief<br>
-										<input type="checkbox" checked="True" name="ot" value="ot">Other Theft<br> 
-              									<input type="checkbox" checked="True" name="tfv" value="tfv">Theft from Vehicle<br> 
-										<input type="checkbox" checked="True" name="tov" value="tov">Theft of Vehicle<br>
-									</form>
-								</ul>
-							</li>
-						</ul>
-					</div>
-					<!-- end #sidebar -->
-					<div style="clear: both;">&nbsp;</div>
->>>>>>> origin/Website
 				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
 			</div>
 		</div>
-		<!-- end #page -->
 	</div>
-	<!-- end #footer -->
+	<!-- end #page -->
+</div>
+<!-- end #footer -->
 
-	<script
-		src="https://maps.googleapis.com/maps/api/js?key = AIzaSyAxhaBWFeRyn_rLmPbAOfZt2D6wMWseHLY&callback=initMap"></script>
-	<script type="text/javascript"
-		src="http://code.jquery.com/jquery-1.6.2.min.js"></script>
-	<script src="fetchData.js"></script>
-	<script src="searchAddress.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key = AIzaSyAxhaBWFeRyn_rLmPbAOfZt2D6wMWseHLY&callback=initMap"></script>
+<script type = "text/javascript" src = "http://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src = "fetchData.js"></script>
 
 </body>
 </html>
