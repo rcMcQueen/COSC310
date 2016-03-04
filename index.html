@@ -26,6 +26,10 @@
 						<div class="entry">
 							<div id="map"></div>
     								<script src = "mapGen.js"></script>
+								<br>
+								<form>  									
+									<button type="button" onclick="initMap()" id='on', style = "height:50px; width:150px;">reset map</button>
+								</form>	
 							</div>
 						</div>
 				<div style="clear: both;">&nbsp;</div>
@@ -54,13 +58,6 @@
 								</form>
 								<li><p id="write"></p></li>	
 						</li>	
-							<li>
-							<h2>Reset Map</h2>
-								<form>  									
-									<button type="button" onclick="initMap()" id='on'>reset map</button>
-								</form>							
-							
-						</li>
 						</ul>
 						<div>
 						<ul>						
@@ -114,7 +111,9 @@
 									<input type="checkbox" checked = "True" name="van" value="van">Vandalism<br>
 									<input type="checkbox" checked = "True" name="aslt" value="aslt">Assault<br>
 									<input type="checkbox" checked = "True" name="dmvlnc" value="dmvlnc">Domestic Violence<br>
-								</form>					
+								</form>	
+
+							<h2>Housing Data</h2>				
 						</li>
 					</ul>
 					</div>
