@@ -2,7 +2,7 @@ var mysql = require('mysql');
 var express = require("express");
 var app = express();
 var router = express.Router();
-
+var year;
 var pool = mysql.createPool({
 	connectionLimit : 50, // sets maximum # of connections
 	host : 'localhost',
@@ -45,13 +45,14 @@ function handleDatabase(request, response, year) {
 
 function checkAddressExists(request, response, address, year) {
 	pool.getConnection(function(err, connection) {
-		connection.query("select * from " + year + " where HUNDRED_BLOCK = "
-				+ address, function(err, rows) {
+		console.log(year);
+		connection.query("SELECT * FROM " + "'" + year + "'" + " WHERE HUNDRED_BLOCK = "
+				+ "'" + address + "'", function(err, rows) {
 			connection.release();
 			if (err) {
 				throw err;
 			} else {
-				return res.json(rows);
+				return response.json(rows);
 			}
 		});
 	});
@@ -76,9 +77,14 @@ app.get("/", function(request, response) {
 });
 router.get('/yearQuery/:year', function(request, response) {
 	response.header("Access-Control-Allow-Origin", "*");
-	var year = request.params.year;
+	year = request.params.year;
 	handleDatabase(request, response, year);
 });
+router.get('/addressSearch/:address', function(request, response){
+	response.header("Access-Control-Allow-Origin","*");
+	var address = request.params.address;
+	checkAddressExists(request,response,address, year);
+})
 app.use('/', router);
 
 app.listen(8888);

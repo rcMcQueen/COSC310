@@ -1,5 +1,5 @@
 function searchAddress() {
-	var address = $('#addressBar').val();
+	var address = $('#addressSearch').val();
 	var year = $('#year option:selected').val();
 	if (year = "yr") {
 		year = "fifteen";
@@ -7,17 +7,17 @@ function searchAddress() {
 	}
 	$.ajax({
 		type : 'GET',
-		url : 'http://localhost:8888/yearQuery/' + year,
+		url : 'http://localhost:8888/addressSearch/' + address,
 		useDefaultHxrHeader : false,
 		dataType : 'json',
 		success : function() {
-			var rows = checkAddressExists(request, response, address, year);
+			window.alert("Success.");
 		},
 		error : function(data) {
 			window.alert("No address found");
 			return;
 		}
-	// check if the address exists and if it does get the infomartion, if not
+	// check if the address exists and if it does get the information, if not
 	// send a pop up to let the user know
 
 	});
