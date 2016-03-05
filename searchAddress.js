@@ -1,4 +1,4 @@
-function searchAddress(geocoder, resultsMap) {
+function searchAddress() {
 	var address = $('#addressBar').val();
 	var year = $('#year option:selected').val();
 	if (year = "yr") {
@@ -21,15 +21,23 @@ function searchAddress(geocoder, resultsMap) {
 	// send a pop up to let the user know
 
 	});
-	var contentString = rows;
+	var addressObj = JSON.parse(rows);
+	var infoString = '<div id="crimeInfo"><p>';
+	for(i = 0; i < addressObj.length(); i++){
+		infoString+=addressObj[i].TYPE+" " +addressObj[i].YEAR+" "
+		+addressObj[i].MONTH+" "+addressObj[i].HUNDRED_BLOCK+" "
+		+addressObj[i].N_HOOD+"<br>";
+	}
 
 	geocoder.geocode({
 		'address' : address
 	}, function(results, status) {
 		if (status === google.maps.GeocoderStatus.OK) {
-			resultsMap.setCenter(results[0].geometry.location);
+			var geocoder = new google.maps.Geocoder();
+			 var mapDiv = document.getElementById('map');
+			 var map = new google.maps.Map(mapDiv, {center: (results[0].geometry.location), zoom: 15 });
 			var marker = new google.maps.Marker({
-				map : resultsMap,
+				map : map,
 				position : results[0].geometry.location
 			});
 			var infowindow = new google.maps.InfoWindow({
@@ -38,6 +46,7 @@ function searchAddress(geocoder, resultsMap) {
 			marker.addListener('click', function() {
 				infowindow.open(map, marker);
 			});
+			marker.setMap(map);
 		} else {
 			alert('Geocode was not successful for the following reason: '
 					+ status);
