@@ -45,9 +45,7 @@ function handleDatabase(request, response, year) {
 
 function checkAddressExists(request, response, address, year) {
 	pool.getConnection(function(err, connection) {
-		console.log(year);
-		connection.query("SELECT * FROM " + "'" + year + "'" + " WHERE HUNDRED_BLOCK = "
-				+ "'" + address + "'", function(err, rows) {
+		connection.query("SELECT * FROM " + year + " WHERE HUNDRED_BLOCK = " + "'" +  address + "'", function(err, rows) {
 			connection.release();
 			if (err) {
 				throw err;
@@ -73,7 +71,6 @@ app.get("/", function(request, response) {
 	response.header("Access-Control-Allow-Origin", "*");
 	response.header("Access-Control-Allow-Headers",
 			"Origin, X-Requested-With, Content-Type, Accept");
-	handleDatabase(request, response);
 });
 router.get('/yearQuery/:year', function(request, response) {
 	response.header("Access-Control-Allow-Origin", "*");
@@ -83,7 +80,7 @@ router.get('/yearQuery/:year', function(request, response) {
 router.get('/addressSearch/:address', function(request, response){
 	response.header("Access-Control-Allow-Origin","*");
 	var address = request.params.address;
-	checkAddressExists(request,response,address, year);
+	checkAddressExists(request,response, address, year);
 })
 app.use('/', router);
 
