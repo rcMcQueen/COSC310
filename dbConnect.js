@@ -42,18 +42,33 @@ function handleDatabase(request, response, year) {
 		});
 	});
 }
-
-function checkAddressExists(request, response, address, year) {
-	pool.getConnection(function(err, connection) {
-		connection.query("SELECT * FROM " + year + " WHERE HUNDRED_BLOCK = " + "'" +  address + "'", function(err, rows) {
-			connection.release();
-			if (err) {
-				throw err;
-			} else {
-				return response.json(rows);
-			}
-		});
-	});
+function checkAddressExists(request, response, address, year){
+    pool.getConnection(function(err, connection) {
+        // Check if there's an error, if so, stop connection and print error
+        if (err) {
+            connection.release();
+            response.json({
+                "code" : 50,
+                "status" : "Error in connection to database"
+            });
+            return;
+        }
+        connection.query("SELECT * FROM " + year + " WHERE HUNDRED_BLOCK = " + "'" + address + "'", function(err, rows) {
+            connection.release();
+            // creates a JSON object of the rows if there is no error
+            if (!err) {
+                response.json(rows);
+            }
+        });
+        // If there is an error, stop and return the error JSON message
+        connection.on('error', function(err) {
+            response.json({
+                "code" : 50,
+                "status" : "Error in connection to database"
+            });
+            return;
+        });
+    });
 }
 
 app.use(function(request, response, next) {
