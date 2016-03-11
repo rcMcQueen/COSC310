@@ -95,8 +95,9 @@ router.get('/yearQuery/:year', function(request, response) {
 router.get('/addressSearch/:address', function(request, response){
 	response.header("Access-Control-Allow-Origin","*");
 	var address = request.params.address;
-	checkAddressExists(request,response, address, year);
-})
+    checkAddressExists(request,response, address, year);
+
+});
 app.use('/', router);
 
 app.listen(8888);
