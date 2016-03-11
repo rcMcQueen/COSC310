@@ -1,4 +1,5 @@
 var rows;
+
 function searchAddress() {
     var address = $('#addressSearch').val();
     var year = $('#year option:selected').val();
@@ -9,17 +10,20 @@ function searchAddress() {
     $.ajax({
         type: 'GET',
         url: 'http://localhost:8888/addressSearch/' + address,
-        useDefaultHxrHeader: false,
+        async: false,
         dataType: 'json',
+        useDefaultHxrHeader: false,
         success: function (data) {
             rows = data;
+            rows = JSON.stringify(rows);
         },
         error: function (data) {
-            window.alert("No address found" + data);
+            window.alert('No data found' + data)
         },
         // check if the address exists and if it does get the information, if not
         // send a pop up to let the user know
     });
+    console.log(rows);
 }
 
 var addressObj = JSON.parse(rows);
@@ -32,7 +36,6 @@ for (i = 0; i < addressObj.length(); i++) {
 
 geocoder.geocode({ 'address': address}, function (results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
-        var geocoder = new google.maps.Geocoder();
         var mapDiv = document.getElementById('map');
         var map = new google.maps.Map(mapDiv, {center: (results[0].geometry.location), zoom: 15});
         var marker = new google.maps.Marker({
