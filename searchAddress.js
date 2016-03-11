@@ -1,6 +1,7 @@
-var geocoder = new google.maps.Geocoder();
 
 function searchAddress() {
+    var geocoder = new google.maps.Geocoder();
+    var rows;
     var address = $('#addressSearch').val();
     var year = $('#year option:selected').val();
     if (year = "yr") {
@@ -14,8 +15,7 @@ function searchAddress() {
         dataType: 'json',
         useDefaultHxrHeader: false,
         success: function (data) {
-            var rows = data;
-            rows = JSON.stringify(rows);
+            rows = JSON.stringify(data);
         },
         error: function (data) {
             window.alert('No data found' + data)
@@ -23,8 +23,7 @@ function searchAddress() {
         // check if the address exists and if it does get the information, if not
         // send a pop up to let the user know
     });
-    console.log(rows);
-    var addressObj = JSON.parse(rows);
+    var addressObj = rows;
     var infoString = '<div id="crimeInfo"><p>';
     for (i = 0; i < addressObj.length(); i++) {
         infoString += addressObj[i].TYPE + " " + addressObj[i].YEAR + " "
