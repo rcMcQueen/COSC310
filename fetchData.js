@@ -49,6 +49,23 @@ $(document).ready(function(){
     });
 });
 
+$(document).ready(function() {
+    $('#house_year').change(function () {
+        //get the value of the selection within the house data selections
+        var house = $('#house_year option:selected').val();
+            $.ajax({
+                type: 'GET',
+                url: 'http://localhost:8888/houseQuery/' + house,
+                useDefaultHxrHeader: false,
+                dataType: 'json',
+                success: function () {
+                    console.log("Success");
+                },
+                error: function (data) {
+                    console.log("Error.", data);
+                }
+
+            });
 // Checkbox calls below, need database instructions
 
 $(document).ready(function(){
