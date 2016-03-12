@@ -4,7 +4,7 @@ function searchAddress() {
     var rows;
     var address = $('#addressSearch').val();
     var year = $('#year option:selected').val();
-    if (year = "yr") {
+    if (year === "yr") {
         year = "fifteen";
         // if option isn't selected, default to 2015
     }
@@ -23,29 +23,36 @@ function searchAddress() {
         // check if the address exists and if it does get the information, if not
         // send a pop up to let the user know
     });
-    var addressObj = rows;
-    var infoString = '<div id="crimeInfo"><p>';
-    for (i = 0; i < addressObj.length(); i++) {
+    var addressObj = JSON.parse(rows);
+    var infoString = '<p>';
+    for (var i = 0; i < addressObj.length; i++) {
         infoString += addressObj[i].TYPE + " " + addressObj[i].YEAR + " "
-            + addressObj[i].MONTH + " " + addressObj[i].HUNDRED_BLOCK + " "
+            + addressObj[i].MONTH + " " + address + " "
             + addressObj[i].N_HOOD + "<br>";
     }
-
+    infoString += "</p>"
+    address +=" vancouver bc canada";
     geocoder.geocode({'address': address}, function (results, status) {
-        if (status === google.maps.GeocoderStatus.OK) {
-            var mapDiv = document.getElementById('map');
-            var map = new google.maps.Map(mapDiv, {center: (results[0].geometry.location), zoom: 15});
+        if (status == google.maps.GeocoderStatus.OK) {
+            var result = results[0].geometry.location;
+            var mapOptions = {
+                center: result,
+                zoom: 15,
+                mapTypeId: google.maps.MapTypeId.TERRAIN
+            }
+            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
             var marker = new google.maps.Marker({
                 map: map,
-                position: results[0].geometry.location
+                position: result
             });
             var infowindow = new google.maps.InfoWindow({
-                content: contentString
+                content: infoString
             });
             marker.addListener('click', function () {
                 infowindow.open(map, marker);
             });
             marker.setMap(map);
+            marker.setVisible(true);
         } else {
             alert('Geocode was not successful for the following reason: '
                 + status);
