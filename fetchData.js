@@ -2,7 +2,7 @@ var yearObj;
 $(document).ready(function () {
         $('#year').change(function () {                 //get the value of the selection within the Year selections 
            var year = $('#year option:selected').val();
-            if (year = 'yr') {
+            if (year == 'yr') {
                 year = 'fifteen';
             }
             $.ajax({
@@ -20,9 +20,41 @@ $(document).ready(function () {
                 }
             });
             yearObj = JSON.parse(yearObj);
-            window.alert(yearObj);
-        });
+            var mapOptions = {
+                center: {lat: 49.2827, lng: -123.1207},
+                zoom: 11
+            };
+            var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+            var geocoder = new google.maps.Geocoder();
+            var address;
+            var infoString;
+            for(var i = 0; i < 10; i++){
+                infoString = "<p>" + yearObj[i].TYPE + " " + yearObj[i].YEAR + " " + yearObj[i].MONTH + " " + yearObj[i].HUNDRED_BLOCK + " " + yearObj[i].N_HOOD + "</p>";
+                address = yearObj[i].HUNDRED_BLOCK + " vancouver bc canada";
+                geocoder.geocode({'address': address}, function(results, status) {
+                    if( status === google.maps.GeocoderStatus.OK){
+
+                    var result = results[0].geometry.location;
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: result
+                });
+                    ;
+                    var infowindow = new google.maps.InfoWindow({
+                        content: infoString
+                });
+                    ;
+                    marker.addListener('click', function () {
+                        infowindow.open(map, marker);
+
+                });
+            } else{
+                    window.alert('Geocode was not successful for the following reasons' + status);
+                    }
+                });
+}
     });
+});
 
 
 $(document).ready(function () {
