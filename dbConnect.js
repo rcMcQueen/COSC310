@@ -3,6 +3,7 @@ var express = require("express");
 var app = express();
 var router = express.Router();
 var year;
+var month;
 var pool = mysql.createPool({
 	connectionLimit : 50, // sets maximum # of connections
 	host : 'localhost',
@@ -71,6 +72,35 @@ function checkAddressExists(request, response, address, year){
     });
 }
 
+function getMonth(request, response, year, month){
+	pool.getConnection(function(err, connection) {
+		// Check if there's an error, if so, stop connection and print error
+		if (err) {
+			connection.release();
+			response.json({
+				"code" : 50,
+				"status" : "Error in connection to database"
+			});
+			return;
+		}
+		connection.query("SELECT * FROM " + year + " WHERE MONTH = " + "'" + month + "'", function(err, rows) {
+			connection.release();
+			// creates a JSON object of the rows if there is no error
+			if (!err) {
+				response.json(rows);
+			}
+		});
+		// If there is an error, stop and return the error JSON message
+		connection.on('error', function(err) {
+			response.json({
+				"code" : 50,
+				"status" : "Error in connection to database"
+			});
+			return;
+		});
+	});
+}
+
 app.use(function(request, response, next) {
 	response.setHeader('Access-Control-Allow-Origin', "http://"
 			+ request.headers.host + ':8888');
@@ -90,13 +120,23 @@ app.get("/", function(request, response) {
 router.get('/yearQuery/:year', function(request, response) {
 	response.header("Access-Control-Allow-Origin", "*");
 	year = request.params.year;
-	handleDatabase(request, response, year);
+	console.log(month);
+	if(month == undefined) {
+		handleDatabase(request, response, year);
+	}
+	else{
+		getMonth(request, response, year, month)
+	}
 });
 router.get('/addressSearch/:address', function(request, response){
 	response.header("Access-Control-Allow-Origin","*");
 	var address = request.params.address;
     checkAddressExists(request,response, address, year);
 
+});
+router.get('/monthQuery/:month', function(request, response){
+	response.header("Access-Control-Allow-Origin","*");
+	month = request.params.month;
 });
 app.use('/', router);
 
