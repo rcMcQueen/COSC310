@@ -59,36 +59,31 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('#month').change(function () {
+        var month = $('#month option:selected').val();
+        window.alert(month);
+        var year = $('#year option:selected').val();
+        if(year == 'yr'){
+            year = 'fifteen';
+        }
         //get the value of the selection within the Year selections
-        var year = $('#month option:selected').val();
+
         $.ajax({
             type: 'GET',
             url: 'http://localhost:8888/monthQuery/' + month,
             useDefaultHxrHeader: false,
             dataType: 'json',
             success: function () {
-                console.log("Success");
+                window.alert("Success");
             },
             error: function (data) {
-                console.log("Error.", data);
+                data = JSON.stringify(data);
+
             }
 
         });
-        $(document).ready(function () {
-            $('#year').click(function () {
-                $.ajax({
-                    type: 'GET',
-                    url: 'http://localhost:8888/',
-                    dataType: 'json',
-                    success: function () {
+    });
+});
 
-                    },
-                    error: function (data) {
-                        console.log("Error.", data);
-                    }
-                });
-            });
-        });
 
         $(document).ready(function () {
             $('#house_year').change(function () {
@@ -107,6 +102,8 @@ $(document).ready(function () {
                     }
 
                 });
+            });
+        });
 // Checkbox calls below, need database instructions
 
                 $(document).ready(function () {
@@ -130,7 +127,7 @@ $(document).ready(function () {
                         });
                     }
                 });
-            });
+
 
             $(document).ready(function () {
                 if ($(bneres).is(":checked")) {
@@ -153,7 +150,7 @@ $(document).ready(function () {
                     });
                 }
             });
-        });
+
 
 
         $(document).ready(function () {
@@ -177,7 +174,7 @@ $(document).ready(function () {
                 });
             }
         });
-    });
+
 
     $(document).ready(function () {
         if ($(ot).is(":checked")) {
@@ -200,7 +197,7 @@ $(document).ready(function () {
             });
         }
     });
-});
+
 
 $(document).ready(function () {
     if ($(tfv).is(":checked")) {
