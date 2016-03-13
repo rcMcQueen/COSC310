@@ -1,9 +1,9 @@
+var map;
 function initMap()
 {
     var mapDiv = document.getElementById('map');
     var map = new google.maps.Map(mapDiv, {center: {lat: 49.2827, lng: -123.1207}, zoom: 11 });
 }
-
 
 google.maps.event.addDomListener(window, 'load', initMap);
 
@@ -104,5 +104,28 @@ google.maps.event.addDomListener(window, 'load', initMap);
 	    };
 	     
 	    	}
-	    	
-google.maps.event.addDomListener(document.getElementById('on'), 'click', areasearch());
+
+function initOverlay(){
+	var stavanger=new google.maps.LatLng(49.23,-123.105);
+	var amsterdam=new google.maps.LatLng(49.23,-123.076);
+	var london=new google.maps.LatLng(49.216,-123.120850);
+
+	var mapOptions = {
+		center: london,
+		zoom: 12,
+		mapTypeId: google.maps.MapTypeId.HYDRA
+	};
+	map = new google.maps.Map(document.getElementById("map"), mapOptions);
+	var myTrip = [stavanger, amsterdam, london, stavanger];
+	var flightPath = new google.maps.Polygon({
+		path: myTrip,
+		strokeColor: "#0100FF",
+		strokeOpacity: 0.8,
+		strokeWeight: 2,
+		fillColor: "#0000FF",
+		fillOpacity: 0.4
+	});
+
+	flightPath.setMap(map);
+
+}
