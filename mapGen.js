@@ -97,16 +97,15 @@ google.maps.event.addDomListener(window, 'load', initMap);
 	    else if ((name.toLowerCase())==("musqueam")) {
 	    	 var mapDiv = document.getElementById('map');
 	    	 var map = new google.maps.Map(mapDiv, {center: {lat: 49.225587, lng: -123.201438}, zoom: 15 });
-	       }    
+	       }
 
-	    else{ 
-	    	document.getElementById('write').innerHTML=("Sorry that search did not work, try:\n Sunset, Central Business District, Mount Pleasant, Hastings-Sunrise, Strathcona, Kensington-Cedar Cottage, West End, Kerrisdale, West Point Grey, Renfrew-Collingwood, Fairview, Shaughnessy, Stanley Park, Kitsilano, South Cambie, Marpole, Grandview-Woodland, Victoria-Fraserview, Oakridge, Killarney, Arbutus Ridge, Musqueam");	    	
+	    else{
+	    	document.getElementById('write').innerHTML=("Sorry that search did not work, try:\n Sunset, Central Business District, Mount Pleasant, Hastings-Sunrise, Strathcona, Kensington-Cedar Cottage, West End, Kerrisdale, West Point Grey, Renfrew-Collingwood, Fairview, Shaughnessy, Stanley Park, Kitsilano, South Cambie, Marpole, Grandview-Woodland, Victoria-Fraserview, Oakridge, Killarney, Arbutus Ridge, Musqueam");
 	    };
-	     
+
 	    	}
 
 function initOverlay(){
-<<<<<<< HEAD
     var x = {
         lat: 49.210724,
         lng: -123.130187
@@ -591,12 +590,6 @@ function initOverlay(){
     var cam30 = new google.maps.LatLng(49.257069,-123.12722); // top left
 
 
-=======
-	
-	var stavanger=new google.maps.LatLng(49.23,-123.105);
-	var amsterdam=new google.maps.LatLng(49.23,-123.076);
-	var london=new google.maps.LatLng(49.216,-123.120850);
->>>>>>> 76e51f1116e8d7f2add53e19d1cd233f15be3c1d
 
 	var mapOptions = {
 		center: x,
@@ -831,23 +824,15 @@ function initOverlay(){
     flightPath20.setMap(map);
     flightPath21.setMap(map);
     flightPath22.setMap(map);
-    var infowindow = new google.maps.InfoWindow({
-        content:"This is Sunset the houses here are 50000"
-    });
 
-<<<<<<< HEAD
     google.maps.event.addListener(flightPath, 'click', function() {
-        infowindow.open(map,flightPath);
+      infowindow.open(map,flightPath);
+  });
+var infowindow = new google.maps.InfoWindow({
+    content:"This is Sunset the houses here are 50000"
     });
-=======
-	var infowindow = new google.maps.InfoWindow({
-  		content:"This is Sunset the houses here are 50000"
-  		});
 
-	google.maps.event.addListener(flightPath, 'click', function() {
-  	infowindow.open(map,flightPath);
-  		});
-
-
->>>>>>> 76e51f1116e8d7f2add53e19d1cd233f15be3c1d
+google.maps.event.addListener(flightPath, 'click', function() {
+  infowindow.open(map,flightPath);
+    });
 }
