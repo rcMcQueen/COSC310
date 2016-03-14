@@ -110,10 +110,10 @@ function initOverlay(){
         lat: 49.210724,
         lng: -123.130187
     };
-	var marpole1 = new google.maps.LatLng(49.205083, -123.10309); //bottom left
-	var marpole2 = new google.maps.LatLng(49.206242, -123.14954); //bottom right
-	var marpole3 = new google.maps.LatLng(49.219443, -123.14826); //top left
-	var marpole4 = new google.maps.LatLng(49.218507,-123.104290); //top right
+    var marpole1 = new google.maps.LatLng(49.205083, -123.10309); //bottom left
+    var marpole2 = new google.maps.LatLng(49.206242, -123.14954); //bottom right
+    var marpole3 = new google.maps.LatLng(49.219443, -123.14826); //top left
+    var marpole4 = new google.maps.LatLng(49.218507,-123.104290); //top right
     var marpole5 = new google.maps.LatLng(49.200169, -123.135510);//between marpole 1 & 2
     var marpole6 = new google.maps.LatLng(49.204095, -123.117606); //between marpole 5 & 2
 
@@ -344,7 +344,6 @@ function initOverlay(){
     var kits6 = new google.maps.LatLng(49.261115,-123.185777); //
     var kits7 = new google.maps.LatLng(49.261311,-123.185904); //
     var kits8 = new google.maps.LatLng(49.273400,-123.185494); // top left
-
     var kits9 = new google.maps.LatLng(49.257196,-123.146036); // bottom right
     var kits10 = new google.maps.LatLng(49.266975,-123.145674); // above bottom right
     var kits11 = new google.maps.LatLng(49.267148,-123.145719); //
@@ -802,7 +801,7 @@ function initOverlay(){
         fillColor: "#0000FF",
         fillOpacity: 0.4
     });
-	flightPath.setMap(map);
+    flightPath.setMap(map);
     flightPath2.setMap(map);
     flightPath3.setMap(map);
     flightPath4.setMap(map);
@@ -825,14 +824,141 @@ function initOverlay(){
     flightPath21.setMap(map);
     flightPath22.setMap(map);
 
-    google.maps.event.addListener(flightPath, 'click', function() {
-      infowindow.open(map,flightPath);
-  });
-var infowindow = new google.maps.InfoWindow({
-    content:"This is Sunset the houses here are 50000"
+var infowindow = new google.maps.InfoWindow({		    //info windows for each overlay section house and rent prices from 2011 censusfrom 				
+    content:"This is Marpole the average house price here is $520 937 and the average rent is $893/month"	   
+    });
+var infowindow2 = new google.maps.InfoWindow({
+    content:"This is Sunset the average house price here is $610 360 and the average rent is $746/month"
+    });
+var infowindow3 = new google.maps.InfoWindow({
+    content: "This is Oakridge the average house price here is $823 641 and the average rent is $893/month"
+    });
+var infowindow4 = new google.maps.InfoWindow({
+    content:"This is Kerrisdale the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow5 = new google.maps.InfoWindow({
+    content:"This is Kensington-cedar cottage the average house price here is $549 605 and the average rent is $839/month"
+    });
+var infowindow6 = new google.maps.InfoWindow({
+    content:"This is Victoria-Fraserview the average house price here is $631 938 and the average rent is $907/month"
+    });
+var infowindow7 = new google.maps.InfoWindow({
+    content:"This is Renfrew-Collingwood the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow8 = new google.maps.InfoWindow({
+    content:"This is Kerrisdale the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow9 = new google.maps.InfoWindow({
+    content:"This is Hestings-Sunrise the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow10 = new google.maps.InfoWindow({
+    content:"This is Grandview-Woodland the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow11 = new google.maps.InfoWindow({
+    content:"This is Strathcona the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow12 = new google.maps.InfoWindow({    ///what
+    content:"This is Dunbar-Southlands (Musqueam) the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow13 = new google.maps.InfoWindow({
+    content:"This is West Point Grey the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow14 = new google.maps.InfoWindow({
+    content:"This is Kitsilano the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow15 = new google.maps.InfoWindow({
+    content:"This is West End the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow16 = new google.maps.InfoWindow({    ///what
+    content:"This is Central Business District the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow17 = new google.maps.InfoWindow({    ///what
+    content:"This is Riley Park the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow18 = new google.maps.InfoWindow({
+    content:"This is Arbutus Ridge the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow19 = new google.maps.InfoWindow({
+    content:"This is Shaughnessy the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow20 = new google.maps.InfoWindow({
+    content:"This is Fairview the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow21 = new google.maps.InfoWindow({
+    content:"This is Mount Pleasant the average house price here is $892 971 and the average rent is $1140/month"
+    });
+var infowindow22 = new google.maps.InfoWindow({
+    content:"This is South Cambie the average house price here is $892 971 and the average rent is $1140/month"
     });
 
-google.maps.event.addListener(flightPath, 'click', function() {
+
+
+flightPath.addListener('click', function() {  //make the info windows pop up when overley clicked on 
   infowindow.open(map,flightPath);
     });
+flightPath2.addListener('click', function() {   
+  infowindow2.open(map,flightPath2);
+    });
+flightPath3.addListener('click', function() {  
+  infowindow3.open(map,flightPath3);
+    });
+flightPath4.addListener('click', function() {   
+  infowindow4.open(map,flightPath4);
+    });
+flightPath5.addListener('click', function() {  
+  infowindow5.open(map,flightPath5);
+    });
+flightPath6.addListener('click', function() {  
+  infowindow6.open(map,flightPath6);
+    });
+flightPath7.addListener('click', function() {   
+  infowindow7.open(map,flightPath7);
+    });
+flightPath8.addListener('click', function() {  
+  infowindow8.open(map,flightPath8);
+    });
+flightPath9.addListener('click', function() {  
+  infowindow9.open(map,flightPath9);
+    });
+flightPath10.addListener('click', function() {  
+  infowindow10.open(map,flightPath10);
+    });
+flightPath11.addListener('click', function() {   
+  infowindow11.open(map,flightPath11);
+    });
+flightPath12.addListener('click', function() {   
+  infowindow12.open(map,flightPath12);
+    });
+flightPath13.addListener('click', function() {   
+  infowindow13.open(map,flightPath13);
+    });
+flightPath14.addListener('click', function() {  
+  infowindow14.open(map,flightPath14);
+    });
+flightPath15.addListener('click', function() {  
+  infowindow15.open(map,flightPath15);
+    });
+flightPath16.addListener('click', function() {   
+  infowindow16.open(map,flightPath16);
+    });
+flightPath17.addListener('click', function() {  
+  infowindow17.open(map,flightPath17);
+    });
+flightPath18.addListener('click', function() {  
+  infowindow18.open(map,flightPath18);
+    });
+flightPath19.addListener('click', function() {  
+  infowindow19.open(map,flightPath19);
+    });
+flightPath20.addListener('click', function() {   
+  infowindow20.open(map,flightPath20);
+    });
+flightPath21.addListener('click', function() {  
+  infowindow21.open(map,flightPath21);
+    });
+flightPath22.addListener('click', function() {  
+  infowindow22.open(map,flightPath22);
+    });
 }
+//http://www.vancouversun.com/business/vanmap/6235770/story.html?__lsa=c6a3-24c3
+//http://www.vancouversun.com/news/vanmap/6236004/story.html and
