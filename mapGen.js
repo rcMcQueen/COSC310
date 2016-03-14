@@ -106,6 +106,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
 	    	}
 
 function initOverlay(){
+<<<<<<< HEAD
     var x = {
         lat: 49.210724,
         lng: -123.130187
@@ -590,6 +591,12 @@ function initOverlay(){
     var cam30 = new google.maps.LatLng(49.257069,-123.12722); // top left
 
 
+=======
+	
+	var stavanger=new google.maps.LatLng(49.23,-123.105);
+	var amsterdam=new google.maps.LatLng(49.23,-123.076);
+	var london=new google.maps.LatLng(49.216,-123.120850);
+>>>>>>> 76e51f1116e8d7f2add53e19d1cd233f15be3c1d
 
 	var mapOptions = {
 		center: x,
@@ -828,7 +835,19 @@ function initOverlay(){
         content:"This is Sunset the houses here are 50000"
     });
 
+<<<<<<< HEAD
     google.maps.event.addListener(flightPath, 'click', function() {
         infowindow.open(map,flightPath);
     });
+=======
+	var infowindow = new google.maps.InfoWindow({
+  		content:"This is Sunset the houses here are 50000"
+  		});
+
+	google.maps.event.addListener(flightPath, 'click', function() {
+  	infowindow.open(map,flightPath);
+  		});
+
+
+>>>>>>> 76e51f1116e8d7f2add53e19d1cd233f15be3c1d
 }
