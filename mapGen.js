@@ -848,69 +848,69 @@ var infowindow6 = new google.maps.InfoWindow({
     position: {lat: 49.218530, lng:-123.065873},
     content:"This is Victoria-Fraserview the average house price here is $631 938 and the average rent is $907/month"
     });
-var infowindow7 = new google.maps.InfoWindow({  //prices from here must be changed
+var infowindow7 = new google.maps.InfoWindow({  
     position: {lat:49.224704 , lng:-123.041063},   
-    content:"This is Killarney the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Killarney the average house price here is $622 103 and the average rent is $1145/month"
     });
 var infowindow8 = new google.maps.InfoWindow({
     position: {lat: 49.241066, lng: -123.038755},
-    content:"This is Renfrew-Collingwood the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Renfrew-Collingwood the average house price here is $489 073 and the average rent is $863/month"
     });
 var infowindow9 = new google.maps.InfoWindow({
     position: {lat: 49.281126, lng: -123.044077 },
-    content:"This is Hestings-Sunrise the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Hestings-Sunrise the average house price here is $558 230 and the average rent is $967/month"
     });
 var infowindow10 = new google.maps.InfoWindow({
     position: {lat: 49.269723, lng:-123.069708},
-    content:"This is Grandview-Woodland the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Grandview-Woodland the average house price here is $543 295 and the average rent is $850/month"
     });
 var infowindow11 = new google.maps.InfoWindow({
     position: {lat: 49.273752, lng: -123.088475 },
-    content:"This is Strathcona the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Strathcona the average house price here is $433 846 and the average rent is $608/month"
     });
 var infowindow12 = new google.maps.InfoWindow({   
     position: {lat:49.225586 , lng:-123.201438},
-    content:"This is Dunbar-Southlands (Musqueam) the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Dunbar-Southlands (Musqueam) the average house price here is $1 203 707 and the average rent is $1521/month"
     });
 var infowindow13 = new google.maps.InfoWindow({
     position: {lat: 49.260966, lng: -123.200093},
-    content:"This is West Point Grey the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is West Point Grey the average house price here is $1 042 693 and the average rent is $1330/month"
     });
 var infowindow14 = new google.maps.InfoWindow({
     position: {lat: 49.270937, lng:-123.162142 },
-    content:"This is Kitsilano the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Kitsilano the average house price here is $990 401 and the average rent is $1196/month"
     });
 var infowindow15 = new google.maps.InfoWindow({
     position: {lat: 49.285646, lng: -123.130621},
-    content:"This is West End the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is West End the average house price here is $677 516 and the average rent is $1278/month"
     });
 var infowindow16 = new google.maps.InfoWindow({   
     position: {lat: 49.271404, lng: -123.099632},
-    content:"This is Central Business District the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Central Business District the average house price here is $494 459 and the average rent is $758/month"
     });
 var infowindow17 = new google.maps.InfoWindow({  
     position: {lat:49.240486, lng:-123.101472},
-    content:"This is Riley Park the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Riley Park the average house price here is $623 525 and the average rent is $872/month"
     });
 var infowindow18 = new google.maps.InfoWindow({
     position: {lat:49.253611 , lng:-123.160431},
-    content:"This is Arbutus Ridge the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Arbutus Ridge the average house price here is $916 210 and the average rent is $1464/month"
     });
 var infowindow19 = new google.maps.InfoWindow({
     position: {lat: 49.245337, lng: -123.141323},
-    content:"This is Shaughnessy the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Shaughnessy the average house price here is $1 667 072 and the average rent is $1590/month"
     });
 var infowindow20 = new google.maps.InfoWindow({
     position: {lat: 49.266031, lng: -123.128940},
-    content:"This is Fairview the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Fairview the average house price here is $483 231 and the average rent is $1029/month"
     });
 var infowindow21 = new google.maps.InfoWindow({
     position: {lat: 49.258266, lng: -123.108180},
-    content:"This is Mount Pleasant the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is Mount Pleasant the average house price here is $720 114 and the average rent is $981/month"
     });
 var infowindow22 = new google.maps.InfoWindow({
     position: {lat: 49.245160, lng:-123.120786},
-    content:"This is South Cambie the average house price here is $892 971 and the average rent is $1140/month"
+    content:"This is South Cambie the average house price here is $710 693 and the average rent is $1067/month"
     });
 
 
