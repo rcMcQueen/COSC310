@@ -106,6 +106,7 @@ google.maps.event.addDomListener(window, 'load', initMap);
 	    	}
 
 function initOverlay(){
+	
 	var stavanger=new google.maps.LatLng(49.23,-123.105);
 	var amsterdam=new google.maps.LatLng(49.23,-123.076);
 	var london=new google.maps.LatLng(49.216,-123.120850);
@@ -127,5 +128,14 @@ function initOverlay(){
 	});
 
 	flightPath.setMap(map);
+
+	var infowindow = new google.maps.InfoWindow({
+  		content:"This is Sunset the houses here are 50000"
+  		});
+
+	google.maps.event.addListener(flightPath, 'click', function() {
+  	infowindow.open(map,flightPath);
+  		});
+
 
 }
