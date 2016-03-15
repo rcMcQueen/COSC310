@@ -101,6 +101,35 @@ function getMonth(request, response, year, month){
 	});
 }
 
+function getHouseData(request,response,houseYear){
+	pool.getConnection(function(err, connection) {
+		// Check if there's an error, if so, stop connection and print error
+		if (err) {
+			connection.release();
+			response.json({
+				"code" : 50,
+				"status" : "Error in connection to database"
+			});
+			return;
+		}
+		connection.query("SELECT * FROM " + houseYear, function(err, rows) {
+			connection.release();
+			// creates a JSON object of the rows if there is no error
+			if (!err) {
+				response.json(rows);
+			}
+		});
+		// If there is an error, stop and return the error JSON message
+		connection.on('error', function(err) {
+			response.json({
+				"code" : 50,
+				"status" : "Error in connection to database"
+			});
+			return;
+		});
+	});
+}
+
 app.use(function(request, response, next) {
 	response.setHeader('Access-Control-Allow-Origin', "http://"
 			+ request.headers.host + ':8888');
@@ -120,7 +149,6 @@ app.get("/", function(request, response) {
 router.get('/yearQuery/:year', function(request, response) {
 	response.header("Access-Control-Allow-Origin", "*");
 	year = request.params.year;
-	console.log(month);
 	if(month == undefined) {
 		handleDatabase(request, response, year);
 	}
@@ -128,6 +156,12 @@ router.get('/yearQuery/:year', function(request, response) {
 		getMonth(request, response, year, month)
 	}
 });
+router.get('/houseQuery/:house',function(request,response){
+	response.header("Access-Control-Allow-Origin","*");
+	var houseYear = request.params.house;
+	getHouseData(request,response,houseYear);
+
+})
 router.get('/addressSearch/:address', function(request, response){
 	response.header("Access-Control-Allow-Origin","*");
 	var address = request.params.address;
