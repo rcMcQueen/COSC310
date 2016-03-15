@@ -1,5 +1,6 @@
 var yearObj;
-var infowindow =  null;
+var infoWindows=new Array(10);
+var createdMarkers=[];
 
 $(document).ready(function () {
         $('#year').change(function () {                 //get the value of the selection within the Year selections 
@@ -29,30 +30,29 @@ $(document).ready(function () {
             var map = new google.maps.Map(document.getElementById("map"), mapOptions);
             var geocoder = new google.maps.Geocoder();
             var address;
-            var string;
-            infowindow = new google.maps.InfoWindow({
-                content : "holding..."
-            });
+            var infoString;
             for(var i = 0; i < 10; i++) {
-                string = "<p>" + yearObj[i].TYPE + " " +yearObj[i].MONTH +
+                infoString = "<p>" + yearObj[i].TYPE + " " +yearObj[i].MONTH +
                     " " + yearObj[i].MONTH + " " + yearObj[i].HUNDRED_BLOCK +
                     " " + yearObj[i].N_HOOD + "</p>";
                 address = yearObj[i].HUNDRED_BLOCK + " vancouver bc canada";
                 geocoder.geocode({'address': address}, function (results, status) {
                     if (status === google.maps.GeocoderStatus.OK) {
-                    var result = results[0].geometry.location;
-                    var marker = new google.maps.Marker({
-                        map: map,
-                        position: result
-                });
-                    ;
-                        google.maps.event.addListener(marker, 'click', function(){
-                            infowindow.setContent(string);
-                            infowindow.open(map,this);
+                        var result = results[0].geometry.location;
+                        var marker = new google.maps.Marker({
+                            map: map,
+                            position: result
+                        });
+                        createdMarkers.push({Marker: marker, Type: yearObj[i].TYPE});
+                        infoWindows[i] = ({Window: new google.maps.InfoWindow({
+                                content: infoString
+                            })});
+                        marker.addListener('click', function () {
+                            infoWindows[i].Window.open(map, marker);
                         });
 
-            } else{
-                    window.alert('Geocode was not successful for the following reasons' + status);
+                    } else {
+                        window.alert('Geocode was not successful for the following reasons' + status);
                     }
                 });
 }
@@ -76,7 +76,6 @@ $(document).ready(function () {
             useDefaultHxrHeader: false,
             dataType: 'json',
             success: function () {
-                window.alert("Success");
             },
             error: function (data) {
                 data = JSON.stringify(data);

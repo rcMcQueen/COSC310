@@ -51,8 +51,6 @@ function searchAddress() {
             marker.addListener('click', function () {
                 infowindow.open(map, marker);
             });
-            marker.setMap(map);
-            marker.setVisible(true);
         } else {
             alert('Geocode was not successful for the following reason: '
                 + status);
