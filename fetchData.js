@@ -1,4 +1,6 @@
 var yearObj;
+var infowindow =  null;
+
 $(document).ready(function () {
         $('#year').change(function () {                 //get the value of the selection within the Year selections 
            var year = $('#year option:selected').val();
@@ -27,27 +29,28 @@ $(document).ready(function () {
             var map = new google.maps.Map(document.getElementById("map"), mapOptions);
             var geocoder = new google.maps.Geocoder();
             var address;
-            var infoString;
-            for(var i = 0; i < 10; i++){
-                infoString = "<p>" + yearObj[i].TYPE + " " + yearObj[i].YEAR + " " + yearObj[i].MONTH + " " + yearObj[i].HUNDRED_BLOCK + " " + yearObj[i].N_HOOD + "</p>";
+            var string;
+            infowindow = new google.maps.InfoWindow({
+                content : "holding..."
+            });
+            for(var i = 0; i < 10; i++) {
+                string = "<p>" + yearObj[i].TYPE + " " +yearObj[i].MONTH +
+                    " " + yearObj[i].MONTH + " " + yearObj[i].HUNDRED_BLOCK +
+                    " " + yearObj[i].N_HOOD + "</p>";
                 address = yearObj[i].HUNDRED_BLOCK + " vancouver bc canada";
-                geocoder.geocode({'address': address}, function(results, status) {
-                    if( status === google.maps.GeocoderStatus.OK){
-
+                geocoder.geocode({'address': address}, function (results, status) {
+                    if (status === google.maps.GeocoderStatus.OK) {
                     var result = results[0].geometry.location;
                     var marker = new google.maps.Marker({
                         map: map,
                         position: result
                 });
                     ;
-                    var infowindow = new google.maps.InfoWindow({
-                        content: infoString
-                });
-                    ;
-                    marker.addListener('click', function () {
-                        infowindow.open(map, marker);
+                        google.maps.event.addListener(marker, 'click', function(){
+                            infowindow.setContent(string);
+                            infowindow.open(map,this);
+                        });
 
-                });
             } else{
                     window.alert('Geocode was not successful for the following reasons' + status);
                     }
