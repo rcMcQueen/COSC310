@@ -68,7 +68,7 @@
 								<p>Year: &nbsp &nbsp &nbsp
 								<select id = "year">
   									<option value="yr" selected>Choose a Year</option>
-                                    					<option value="fifteen">2015</option>
+									<option value="fifteen">2015</option>
 									<option value="fourteen">2014</option>
 									<option value="thirteen">2013</option>
 									<option value="twelve">2012</option>
@@ -101,16 +101,13 @@
 								</select> </p>							
 						</li>	
 						<li>
-							<h2>Crimes</h2>							
-								<form action="" id = "crimes">
-									<input type="checkbox" checked = "True" name="bnecom" value="bnecom">BNE Commercial<br>
-									<input type="checkbox" checked = "True" name="bneres" value="bneres">BNE Residential/Other<br>
-									<input type="checkbox" checked = "True" name="mschf" value="mschf">Mischief<br>
-									<input type="checkbox" checked = "True" name="ot" value="ot">Other Theft<br>
-									<input type="checkbox" checked = "True" name="tfv" value="tfv">Theft from Vehicle<br>
-									<input type="checkbox" checked = "True" name="tov" value="tov">Theft of Vehicle<br>
-								</form>	
-
+							<h2>Crimes</h2>
+									<input id="bnecombox" type="checkbox" onclick="toggleMarkers('BNE Commercial')" checked="checked">BNE Commercial</input></br>
+									<input id="bneresbox" type="checkbox" onclick="toggleMarkers('BNE Residential/Other')" checked="checked">BNE Residential/Other</input></br>
+									<input id="mschfbox" type="checkbox" onclick="toggleMarkers('Mischief')" checked="checked">Mischief</input></br>
+									<input id="otbox" type="checkbox" onclick="toggleMarkers('Other Theft')" checked="checked">Other Theft</input></br>
+									<input id="tfvbox" type="checkbox" onclick="toggleMarkers('Theft from Vehicle')" checked="checked">Theft from Vehicle</input></br>
+									<input id="tovbox" type="checkbox" onclick="toggleMarkers('Theft of Vehicle')" checked="checked">Theft of Vehicle</input></br>
 							<h2>Housing Data</h2>
 							<p>Year: &nbsp &nbsp &nbsp
 								<select id = "house_year">
