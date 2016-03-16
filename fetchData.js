@@ -39,6 +39,7 @@ $(document).ready(function () {
                 geocoder.geocode({'address': address}, function (results, status) {
                     if (status === google.maps.GeocoderStatus.OK) {
                         var result = results[0].geometry.location;
+                        window.alert(result);
                         var marker = new google.maps.Marker({
                             map: map,
                             position: result
@@ -56,6 +57,10 @@ $(document).ready(function () {
                     }
                 });
 }
+    });
+    //When a marker is deselected, closes the info box.
+    google.maps.event.addListener(map, 'click', function() {
+        infowindow.close();
     });
 });
 
@@ -106,8 +111,14 @@ $(document).ready(function () {
                 });
             });
         });
-// Checkbox calls below, need database instructions
 
-                   // if ($('#bnecom').is(":checked"))
-
-//end of checkbox functions
+//BUG: Deselects the markers if you choose Other Theft, even though the ones on the map are of the type "Theft from Vehicle" and also does this for Theft from Vehicle.
+function toggleMarkers(category) {
+    for(var i = 0; i < createdMarkers.length; i++){
+        if(!createdMarkers[i].Marker.getVisible() && createdMarkers[i].Type == category){
+            createdMarkers[i].Marker.setVisible(true);
+        }   else{
+            createdMarkers[i].Marker.setVisible(false);
+        }
+   }
+}
