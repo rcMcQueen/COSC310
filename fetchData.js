@@ -1,9 +1,6 @@
 var yearObj;
 var infoWindows=new Array(10);
 var createdMarkers=[];
-var markerGroups = {
-    "Other Theft": [], "BNE Residential/Commercial": [], "Theft from Vehicle": [], "Theft of Vehicle": [], "BNE Commercial": [], "Mischief": []
-};
 
 $(document).ready(function () {
         $('#year').change(function () {                 //get the value of the selection within the Year selections 
