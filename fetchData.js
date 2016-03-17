@@ -1,6 +1,9 @@
 var yearObj;
 var infoWindows=new Array(10);
 var createdMarkers=[];
+var markerGroups = {
+    "Other Theft": [], "BNE Residential/Commercial": [], "Theft from Vehicle": [], "Theft of Vehicle": [], "BNE Commercial": [], "Mischief": []
+};
 
 $(document).ready(function () {
         $('#year').change(function () {                 //get the value of the selection within the Year selections 
@@ -112,13 +115,27 @@ $(document).ready(function () {
             });
         });
 
-//BUG: Deselects the markers if you choose Other Theft, even though the ones on the map are of the type "Theft from Vehicle" and also does this for Theft from Vehicle.
-function toggleMarkers(category) {
+//Check if the boxes are checked, if so, display the appropriate marker based on the Type of crime. Otherwise, hide the marker.
+function show(category){
     for(var i = 0; i < createdMarkers.length; i++){
-        if(!createdMarkers[i].Marker.getVisible() && createdMarkers[i].Type == category){
+        if(createdMarkers[i].Type === category){
             createdMarkers[i].Marker.setVisible(true);
-        }   else{
+        }
+    }
+}
+
+function hide(category){
+    for(var i = 0; i < createdMarkers.length; i++){
+        if(createdMarkers[i].Type === category){
             createdMarkers[i].Marker.setVisible(false);
         }
-   }
+    }
+}
+
+function checkBox(box, category){
+    if(box.checked){
+        show(category);
+    }   else{
+        hide(category);
+    }
 }
