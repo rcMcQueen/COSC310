@@ -1,5 +1,4 @@
 var yearObj;
-var infoWindows=new Array(10);
 var createdMarkers=[];
 
 $(document).ready(function () {
@@ -29,28 +28,27 @@ $(document).ready(function () {
             };
             var map = new google.maps.Map(document.getElementById("map"), mapOptions);
             var geocoder = new google.maps.Geocoder();
-            var address;
-            var infoString;
+            var infoWindow = new google.maps.InfoWindow({
+                content : "holding..."
+            });
             for(var i = 0; i < 10; i++) {
-                infoString = "<p>" + yearObj[i].TYPE + " " +yearObj[i].MONTH +
-                    " " + yearObj[i].MONTH + " " + yearObj[i].HUNDRED_BLOCK +
-                    " " + yearObj[i].N_HOOD + "</p>";
-                address = yearObj[i].HUNDRED_BLOCK + " vancouver bc canada";
+               var address = yearObj[i].HUNDRED_BLOCK + " vancouver bc canada";
                 geocoder.geocode({'address': address}, function (results, status) {
-                    if (status === google.maps.GeocoderStatus.OK) {
-                        var result = results[0].geometry.location;
-                        window.alert(result);
-                        var marker = new google.maps.Marker({
+                    if (status == google.maps.GeocoderStatus.OK) {
+                       var marker = new google.maps.Marker({
                             map: map,
-                            position: result
+                            position: results[0].geometry.location,
+                            info: "<p>" + yearObj[i].TYPE + " " +yearObj[i].MONTH +
+                            " " + yearObj[i].MONTH + " " + yearObj[i].HUNDRED_BLOCK +
+                            " " + yearObj[i].N_HOOD + "</p>",
+                            title: yearObj[i].TYPE
                         });
                         createdMarkers.push({Marker: marker, Type: yearObj[i].TYPE});
-                        infoWindows[i] = ({Window: new google.maps.InfoWindow({
-                                content: infoString
-                            })});
-                        marker.addListener('click', function () {
-                            infoWindows[i].Window.open(map, marker);
-                        });
+                        marker.addListener('click', function(){
+                            infoWindow.setContent(marker.info);
+                            infoWindow.open(map, marker);
+                        })(info);
+
 
                     } else {
                         window.alert('Geocode was not successful for the following reasons' + status);
@@ -60,7 +58,7 @@ $(document).ready(function () {
     });
     //When a marker is deselected, closes the info box.
     google.maps.event.addListener(map, 'click', function() {
-        infowindow.close();
+        infoWindow.close();
     });
 });
 
