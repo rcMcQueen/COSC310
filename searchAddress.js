@@ -31,8 +31,8 @@ function searchAddress() {
             + addressObj[i].N_HOOD + "<br>";
     }
     infoString += "</p>"
-    addresses +=" vancouver bc canada";
-    geocoder.geocode({address: addresses}, function (results, status) {
+    address +=" vancouver bc canada";
+    geocoder.geocode({address: address}, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             var result = results[0].geometry.location;
             var mapOptions = {
