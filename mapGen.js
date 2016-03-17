@@ -107,9 +107,10 @@ google.maps.event.addDomListener(window, 'load', initMap);
 
 function initOverlay(){
     var x = {
-        lat: 49.210724,
-        lng: -123.130187
+        lat: 49.244676,
+        lng: -123.1991026
     };
+    //Variables for neighboroods in Vancouver and lat/long values to make a border around them for the overlay
     var marpole1 = new google.maps.LatLng(49.205083, -123.10309); //bottom left
     var marpole2 = new google.maps.LatLng(49.206242, -123.14954); //bottom right
     var marpole3 = new google.maps.LatLng(49.219443, -123.14826); //top left
@@ -129,7 +130,6 @@ function initOverlay(){
     var oakridge4 = new google.maps.LatLng(49.233182,-123.10566); //top right
 
     var kessidale1 = new google.maps.LatLng(49.217121,-123.17918); // bottom left
-    var kessidale2 = new google.maps.LatLng(49.206366,-123.149367); // bottom right
     var kessidale3 = new google.maps.LatLng(49.234728,-123.17869); // top left
     var kessidale4 = new google.maps.LatLng(49.234281,-123.13954); // top right
     var kessidale5 = new google.maps.LatLng(49.219394,-123.14009); // bottom bottom right
@@ -236,7 +236,6 @@ function initOverlay(){
 
     var dunbar1 = new google.maps.LatLng(49.236834,-123.221578); // bottom left
     var dunbar2 = new google.maps.LatLng(49.234775,-123.170351); // bottom right
-    var dunbar3 = new google.maps.LatLng(49.258095,-123.203164); // bottom left for west earl
     var dunbar4 = new google.maps.LatLng(49.257569,-123.170390); // top right
     var dunbar5 = new google.maps.LatLng(49.236834,-123.221578); // up from bottom left
     var dunbar6 = new google.maps.LatLng(49.239437,-123.219831); //
@@ -335,7 +334,6 @@ function initOverlay(){
     var grey33 = new google.maps.LatLng(49.259378,-123.183985); //
     var grey34 = new google.maps.LatLng(49.257838,-123.184048); //
 
-    var kits = new google.maps.LatLng(); //
     var kits1 = new google.maps.LatLng(49.257836,-123.183995); // bottom left
     var kits2 = new google.maps.LatLng(49.259672,-123.1839); // above bottom left
     var kits3 = new google.maps.LatLng(49.259781,-123.183942); //
@@ -358,7 +356,6 @@ function initOverlay(){
     var kits20 = new google.maps.LatLng(49.278393,-123.142278); //between top right and kits19
 
 
-    var west = new google.maps.LatLng(); //
     var west1 = new google.maps.LatLng(49.275763,-123.136238); // bottom left
     var west2 = new google.maps.LatLng(49.276243,-123.136083); //
     var west3 = new google.maps.LatLng(49.276556,-123.136739); //
@@ -372,7 +369,6 @@ function initOverlay(){
     var west11 = new google.maps.LatLng(49.294833,-123.136915); //top right;
     var west12 = new google.maps.LatLng(49.284448,-123.121165); // bottom right
 
-    var dt = new google.maps.LatLng();
     var dt1 = new google.maps.LatLng(49.284467,-123.121129); //top right
     var dt2 = new google.maps.LatLng(49.294047,-123.135938); //above top right
     var dt3 = new google.maps.LatLng(49.294095,-123.135952);
@@ -408,7 +404,6 @@ function initOverlay(){
     var dt33 = new google.maps.LatLng(49.2729631,-123.102928);
     var dt34 = new google.maps.LatLng(49.272722,-123.100175); // bottom right
 
-    var riley = new google.maps.LatLng(); //
     var riley1 = new google.maps.LatLng(49.233636,-123.116006); // bottom left going UP
     var riley2 = new google.maps.LatLng(49.238205,-123.115799); //
     var riley3 = new google.maps.LatLng(49.238594,-123.115979); //
@@ -433,10 +428,8 @@ function initOverlay(){
     var riley22 = new google.maps.LatLng(49.233029,-123.098365); //
     var riley23 = new google.maps.LatLng(49.233064,-123.098577); //
 
-    var arb = new google.maps.LatLng(); //
     var arb1 = new google.maps.LatLng(49.25725,-123.152438); // top right going down to bottom right
     var arb2 = new google.maps.LatLng(49.251636,-123.152411); //
-    var arb3 = new google.maps.LatLng(49.251549,-123.152442); //
     var arb4 = new google.maps.LatLng(49.251497,-123.152482); //
     var arb5 = new google.maps.LatLng(49.25098,-123.151406); //
     var arb6 = new google.maps.LatLng(49.250183,-123.151821); //
@@ -473,7 +466,7 @@ function initOverlay(){
     var arb37 = new google.maps.LatLng(49.257436,-123.164283); //
     var arb38 = new google.maps.LatLng(49.257461,-123.164093); //
 
-    var shaugh = new google.maps.LatLng(); //
+
     var shaugh1 = new google.maps.LatLng(49.257254,-123.152373); //top left to bottom left
     var shaugh2 = new google.maps.LatLng(49.252052,-123.152507); //
     var shaugh3 = new google.maps.LatLng(49.251629,-123.152326); //
@@ -510,7 +503,6 @@ function initOverlay(){
     var shaugh34 = new google.maps.LatLng(49.250919,-123.127532); //
     var shaugh35 = new google.maps.LatLng(49.257054,-123.127271); //top right
 
-    var fair = new google.maps.LatLng(); //
     var fair1 = new google.maps.LatLng(49.257188,-123.145981); // bottom left to top left
     var fair2 = new google.maps.LatLng(49.266975,-123.145601); //
     var fair3 = new google.maps.LatLng(49.26714,-123.145536); //
@@ -627,178 +619,178 @@ function initOverlay(){
     var myTrip22 = [cam1,cam2,cam3,cam4,cam5,cam6,cam7,cam8,cam9,cam10,cam11,cam12,cam13,cam14,cam15,cam16,cam17,cam18,cam19,cam20,cam21,cam22,cam23,cam24,cam25,cam26,cam27,cam28,cam29,cam30];
     var flightPath = new google.maps.Polygon({
 		path: myTrip,
-		strokeColor: "#0100FF",
+		strokeColor: "#0066CC",
 		strokeOpacity: 0.8,
 		strokeWeight: 2,
-		fillColor: "#0000FF",
+		fillColor: "#0066CC",
 		fillOpacity: 0.4
 	});
     var flightPath2 = new google.maps.Polygon({
         path: myTrip2,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath3 = new google.maps.Polygon({
         path: myTrip3,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath4 = new google.maps.Polygon({
         path: myTrip4,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath5 = new google.maps.Polygon({
         path: myTrip5,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath6 = new google.maps.Polygon({
         path: myTrip6,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath7 = new google.maps.Polygon({
         path: myTrip7,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath8 = new google.maps.Polygon({
         path: myTrip8,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath9 = new google.maps.Polygon({
         path: myTrip9,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath10 = new google.maps.Polygon({
         path: myTrip10,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath11 = new google.maps.Polygon({
         path: myTrip11,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath12 = new google.maps.Polygon({
         path: myTrip12,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath13 = new google.maps.Polygon({
         path: myTrip13,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath14 = new google.maps.Polygon({
         path: myTrip14,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath15 = new google.maps.Polygon({
         path: myTrip15,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath16 = new google.maps.Polygon({
         path: myTrip16,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath17 = new google.maps.Polygon({
         path: myTrip17,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath18 = new google.maps.Polygon({
         path: myTrip18,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath19 = new google.maps.Polygon({
         path: myTrip19,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath20 = new google.maps.Polygon({
         path: myTrip20,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath21 = new google.maps.Polygon({
         path: myTrip21,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     var flightPath22 = new google.maps.Polygon({
         path: myTrip22,
-        strokeColor: "#0100FF",
+        strokeColor: "#0066CC",
         strokeOpacity: 0.8,
         strokeWeight: 2,
-        fillColor: "#0000FF",
+        fillColor: "#0066CC",
         fillOpacity: 0.4
     });
     flightPath.setMap(map);
@@ -824,7 +816,7 @@ function initOverlay(){
     flightPath21.setMap(map);
     flightPath22.setMap(map);
 
-var infowindow = new google.maps.InfoWindow({		    //info windows for each overlay section house and rent prices from 2011 censusfrom 				
+var infowindow = new google.maps.InfoWindow({		    //info windows for each overlay section house and rent prices from 2011 censusfrom
      position: {lat: 49.210724, lng:-123.130187},
      content:"This is Marpole the average house price here is $520 937 and the average rent is $893/month"	   
     });
@@ -913,74 +905,73 @@ var infowindow22 = new google.maps.InfoWindow({
     content:"This is South Cambie the average house price here is $710 693 and the average rent is $1067/month"
     });
 
+    flightPath.addListener('click', function() {  //make the info windows pop up when overley clicked on
+        infowindow.open(map,flightPath);
+    });
+    flightPath2.addListener('click', function() {
+        infowindow2.open(map,flightPath2);
+    });
+    flightPath3.addListener('click', function() {
+        infowindow3.open(map,flightPath3);
+    });
+    flightPath4.addListener('click', function() {
+        infowindow4.open(map,flightPath4);
+    });
+    flightPath5.addListener('click', function() {
+        infowindow5.open(map,flightPath5);
+    });
+    flightPath6.addListener('click', function() {
+        infowindow6.open(map,flightPath6);
+    });
+    flightPath7.addListener('click', function() {
+        infowindow7.open(map,flightPath7);
+    });
+    flightPath8.addListener('click', function() {
+        infowindow8.open(map,flightPath8);
+    });
+    flightPath9.addListener('click', function() {
+        infowindow9.open(map,flightPath9);
+    });
+    flightPath10.addListener('click', function() {
+        infowindow10.open(map,flightPath10);
+    });
+    flightPath11.addListener('click', function() {
+        infowindow11.open(map,flightPath11);
+    });
+    flightPath12.addListener('click', function() {
+        infowindow12.open(map,flightPath12);
+    });
+    flightPath13.addListener('click', function() {
+        infowindow13.open(map,flightPath13);
+    });
+    flightPath14.addListener('click', function() {
+        infowindow14.open(map,flightPath14);
+    });
+    flightPath15.addListener('click', function() {
+        infowindow15.open(map,flightPath15);
+    });
+    flightPath16.addListener('click', function() {
+        infowindow16.open(map,flightPath16);
+    });
+    flightPath17.addListener('click', function() {
+        infowindow17.open(map,flightPath17);
+    });
+    flightPath18.addListener('click', function() {
+        infowindow18.open(map,flightPath18);
+    });
+    flightPath19.addListener('click', function() {
+        infowindow19.open(map,flightPath19);
+    });
+    flightPath20.addListener('click', function() {
+        infowindow20.open(map,flightPath20);
+    });
+    flightPath21.addListener('click', function() {
+        infowindow21.open(map,flightPath21);
+    });
+    flightPath22.addListener('click', function() {
+        infowindow22.open(map,flightPath22);
+    });
 
-
-flightPath.addListener('click', function() {  //make the info windows pop up when overley clicked on 
-  infowindow.open(map,flightPath);
-    });
-flightPath2.addListener('click', function() {   
-  infowindow2.open(map,flightPath2);
-    });
-flightPath3.addListener('click', function() {  
-  infowindow3.open(map,flightPath3);
-    });
-flightPath4.addListener('click', function() {   
-  infowindow4.open(map,flightPath4);
-    });
-flightPath5.addListener('click', function() {  
-  infowindow5.open(map,flightPath5);
-    });
-flightPath6.addListener('click', function() {  
-  infowindow6.open(map,flightPath6);
-    });
-flightPath7.addListener('click', function() {   
-  infowindow7.open(map,flightPath7);
-    });
-flightPath8.addListener('click', function() {  
-  infowindow8.open(map,flightPath8);
-    });
-flightPath9.addListener('click', function() {  
-  infowindow9.open(map,flightPath9);
-    });
-flightPath10.addListener('click', function() {  
-  infowindow10.open(map,flightPath10);
-    });
-flightPath11.addListener('click', function() {   
-  infowindow11.open(map,flightPath11);
-    });
-flightPath12.addListener('click', function() {   
-  infowindow12.open(map,flightPath12);
-    });
-flightPath13.addListener('click', function() {   
-  infowindow13.open(map,flightPath13);
-    });
-flightPath14.addListener('click', function() {  
-  infowindow14.open(map,flightPath14);
-    });
-flightPath15.addListener('click', function() {  
-  infowindow15.open(map,flightPath15);
-    });
-flightPath16.addListener('click', function() {   
-  infowindow16.open(map,flightPath16);
-    });
-flightPath17.addListener('click', function() {  
-  infowindow17.open(map,flightPath17);
-    });
-flightPath18.addListener('click', function() {  
-  infowindow18.open(map,flightPath18);
-    });
-flightPath19.addListener('click', function() {  
-  infowindow19.open(map,flightPath19);
-    });
-flightPath20.addListener('click', function() {   
-  infowindow20.open(map,flightPath20);
-    });
-flightPath21.addListener('click', function() {  
-  infowindow21.open(map,flightPath21);
-    });
-flightPath22.addListener('click', function() {  
-  infowindow22.open(map,flightPath22);
-    });
 }
 //http://www.vancouversun.com/business/vanmap/6235770/story.html?__lsa=c6a3-24c3
 //http://www.vancouversun.com/news/vanmap/6236004/story.html and
