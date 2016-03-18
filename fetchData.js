@@ -2,7 +2,8 @@ var yearObj;
 var createdMarkers=[];
 
 $(document).ready(function () {
-        $('#year').change(function () {                 //get the value of the selection within the Year selections 
+        $('#year').change(function () {
+            //get the value of the selection within the Year selections 
            var year = $('#year option:selected').val();
             if (year == 'yr') {
                 year = 'fifteen';
@@ -13,6 +14,7 @@ $(document).ready(function () {
                 async: false,
                 useDefaultHxrHeader: false,
                 dataType: 'json',
+                //on success, convert the objects to JSON notation
                 success: function (data) {
                     console.log("Success");
                     yearObj = JSON.stringify(data);
@@ -21,6 +23,7 @@ $(document).ready(function () {
                     console.log("Error.", data);
                 }
             });
+            // transform the strings into standable text, ex: "asd" -> asd
             yearObj = JSON.parse(yearObj);
             var mapOptions = {
                 center: {lat: 49.2827, lng: -123.1207},
@@ -31,6 +34,10 @@ $(document).ready(function () {
             var infoWindow = new google.maps.InfoWindow({
                 content : "holding..."
             });
+            //due to google maps api, limits to 10 markers. set info for each respective marker
+            //set infowindow to the information about the current crime at the state of the for loop
+
+            //BUG: infowindow not displaying the correct information, instead displaying information about last window only
             for(var i = 0; i < 10; i++) {
                var address = yearObj[i].HUNDRED_BLOCK + " vancouver bc canada";
                 geocoder.geocode({'address': address}, function (results, status) {
@@ -65,8 +72,8 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     $('#month').change(function () {
+        //BUG: month selection must be done before year data is loaded in, otherwise is not filtered.
         var month = $('#month option:selected').val();
-        window.alert(month);
         var year = $('#year option:selected').val();
         if(year == 'yr'){
             year = 'fifteen';
@@ -78,10 +85,11 @@ $(document).ready(function () {
             url: 'http://localhost:8888/monthQuery/' + month,
             useDefaultHxrHeader: false,
             dataType: 'json',
-            success: function () {
+            success: function (data) {
+                data = JSON.stringify(data);
             },
             error: function (data) {
-                data = JSON.stringify(data);
+                console.log('Error, AJAX call was unsuccessful.' + data);
 
             }
 
@@ -100,7 +108,7 @@ $(document).ready(function () {
                     useDefaultHxrHeader: false,
                     dataType: 'json',
                     success: function () {
-                        console.log("Success");
+                        console.log("Successfully loaded housing data");
                     },
                     error: function (data) {
                         console.log("Error.", data);
