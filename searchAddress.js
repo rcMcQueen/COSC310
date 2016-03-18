@@ -14,15 +14,18 @@ function searchAddress() {
         async: false,
         dataType: 'json',
         useDefaultHxrHeader: false,
+        //on success, convert objects to JSON notation
         success: function (data) {
             rows = JSON.stringify(data);
         },
+        // check if the address exists and if it does get the information, if not alert the user
         error: function (data) {
             window.alert('No data found' + data)
         },
-        // check if the address exists and if it does get the information, if not
-        // send a pop up to let the user know
+
     });
+    // transform the strings into standable text, ex: "asd" -> asd
+    //set the infoString to the relevant information regarding the crime based on the current iteration
     var addressObj = JSON.parse(rows);
     var infoString = '<p>';
     for (var i = 0; i < addressObj.length; i++) {
@@ -32,6 +35,8 @@ function searchAddress() {
     }
     infoString += "</p>"
     address +=" vancouver bc canada";
+    // use the geocode to find the lat and long variables and create a marker
+    // with the information about the crime at that address
     geocoder.geocode({address: address}, function (results, status) {
         if (status == google.maps.GeocoderStatus.OK) {
             var result = results[0].geometry.location;
@@ -55,7 +60,6 @@ function searchAddress() {
             alert('Geocode was not successful for the following reason: '
                 + status);
         }
-        // use the geocode to find the lat and long variables and create a marker
-        // with the information about the crime at that address
+
     });
 }
