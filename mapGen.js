@@ -1,4 +1,5 @@
 var map;
+
 function initMap()
 {
     var mapDiv = document.getElementById('map');
@@ -107,10 +108,11 @@ google.maps.event.addDomListener(window, 'load', initMap);
 
 function initOverlay(){
     var x = {
-        lat: 49.244676,
-        lng: -123.1991026
+        lat: 49.248,
+        lng: -123.1207
     };
-    //Variables for neighboroods in Vancouver and lat/long values to make a border around them for the overlay
+    //Variables for neighborhoods in Vancouver and lat/long values to make a border around them for the overlay
+    //SPRINT 3: Instead of declaring all of the variables, put the coordinates in an object array to reduce space taken up and readability of code
     var marpole1 = new google.maps.LatLng(49.205083, -123.10309); //bottom left
     var marpole2 = new google.maps.LatLng(49.206242, -123.14954); //bottom right
     var marpole3 = new google.maps.LatLng(49.219443, -123.14826); //top left
@@ -588,6 +590,9 @@ function initOverlay(){
 		mapTypeId: google.maps.MapTypeId.HYDRA
 	};
 	map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    //SPRINT 3: pass the arrays defined above to reduce the eye sore of var inputs
+
 	var myTrip = [marpole3, marpole4, marpole1, marpole6, marpole5,marpole2];
     var myTrip2 = [sunset2, sunset1, sunset5, sunset4, sunset3];
 	var myTrip3 = [oakridge1, oakridge2,oakridge3, oakridge4];
@@ -617,6 +622,8 @@ function initOverlay(){
     var myTrip21 = [mount1,mount2,mount3,mount4,mount5,mount6,mount7,mount8,mount9,mount10,mount11,mount12,mount13,mount14,mount15,mount16,mount17,mount18,mount19,mount20,mount21,mount22,mount23,mount24,mount25,mount26,
         mount27,mount28,mount29];
     var myTrip22 = [cam1,cam2,cam3,cam4,cam5,cam6,cam7,cam8,cam9,cam10,cam11,cam12,cam13,cam14,cam15,cam16,cam17,cam18,cam19,cam20,cam21,cam22,cam23,cam24,cam25,cam26,cam27,cam28,cam29,cam30];
+
+    //SPRINT 3: append var names to allow for a for loop to reduce amount of declarations
     var flightPath = new google.maps.Polygon({
 		path: myTrip,
 		strokeColor: "#0066CC",
@@ -816,6 +823,7 @@ function initOverlay(){
     flightPath21.setMap(map);
     flightPath22.setMap(map);
 
+    //SPRINT 3: use housing data we have in the database
 var infowindow = new google.maps.InfoWindow({		    //info windows for each overlay section house and rent prices from 2011 censusfrom
      position: {lat: 49.210724, lng:-123.130187},
      content:"This is Marpole the average house price here is $520 937 and the average rent is $893/month"	   
@@ -905,7 +913,8 @@ var infowindow22 = new google.maps.InfoWindow({
     content:"This is South Cambie the average house price here is $710 693 and the average rent is $1067/month"
     });
 
-    flightPath.addListener('click', function() {  //make the info windows pop up when overley clicked on
+    //SPRINT 3: for loop to reduce the amount of redundant declarations
+    flightPath.addListener('click', function() {  //make the info windows pop up when overlay clicked on
         infowindow.open(map,flightPath);
     });
     flightPath2.addListener('click', function() {
