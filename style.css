@@ -70,7 +70,7 @@ a:hover {
 	width: 980px;
 	height: 100px;
 	margin: 0px auto;
-	padding: 80px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	color: #3B3B3B;
 }
 
@@ -249,7 +249,7 @@ a:hover {
 }
 
 .post .resetbutton {
-	padding:0px 0px 0px 280px;
+	padding:0px 0px 0px 0px;
 }
 
 .links {
