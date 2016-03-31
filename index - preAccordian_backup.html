@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<head>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Vancouver Crime Map</title>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600' rel='stylesheet' type='text/css' />
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+</head>
+<body>
+<div id="wrapper">
+	<div id="header-wrapper">
+		<div id="header">
+			<div id="logo">
+				<h1><a href="#">Vancouver Crime Map</a></h1>
+			</div>
+		</div>
+	</div>
+	<!-- end #menu -->
+	<div id="page">
+		<div id="page-bgtop">
+			<div id="page-bgbtm">
+				<div id="content">
+					<div class="post">
+						<h2 class="title"><a href="#">CrimeMap</a></h2>
+						<div class="entry">
+							<div id="map"></div>
+    								<script src = "mapGen.js"></script>
+								<br>
+								<form>
+									<div class = "resetbutton">  									
+										<button type="button" onclick="initMap()" id='on' style = "width:150px;height:50px" text-align:center><h4>Reset map</h4></button>
+									</div>
+<br>
+<br>
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Accordion Slider</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<style>
+.accordion {
+    -webkit-box-shadow: 0px 75px 35px -55px rgba(10, 30, 65, 0.6);
+    -moz-box-shadow: 0px 75px 35px -55px rgba(10, 30, 65, 0.6);
+    box-shadow: 0px 75px 35px -55px rgba(10, 30, 65, 0.6);
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: #505050;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 8px;
+    margin: 0 auto;
+    height: 180px;
+    width: 704px;
+}
+
+.accordion > ul > li,
+.accordion-title,
+.accordion-content,
+.accordion-separator {
+    float: left;
+}
+
+.accordion > ul > li {
+    background-color: #1f1f1f;
+    margin-right: -540px;
+    margin-bottom: -0px;
+}
+
+.accordion-select:checked ~ .accordion-separator {
+    margin-right: 540px;
+    margin-bottom: 0px;
+}
+
+.accordion-title,
+.accordion-select  {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    width: 40px;
+    height: 180px;
+    font-size: 15px;
+}
+
+.accordion-title span {
+    margin-bottom: 20px; 
+    margin-left: 20px;
+}
+
+.accordion-select:hover ~ .accordion-title,
+.accordion-select:checked ~ .accordion-title {
+    background-color: #3068cc;
+}
+
+.accordion-title span  {	
+    transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -ms-writing-mode: lr-bt;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    margin-left: 0px;
+    line-height: 40px;
+}
+
+.accordion-content {
+    background-color: #3e3e3e;
+    color: #f5f2f0;
+    height: 136px;
+    width: 496px;
+    padding: 22px;
+}
+
+.accordion-title,
+.accordion-select:checked ~ .accordion-content {
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+/* Do not change following properties, they aren't 
+generated automatically and are common for each slider. */
+.accordion {
+    overflow: hidden;
+}
+
+.accordion > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 101%;
+}
+
+.accordion > ul > li,
+.accordion-title {
+    position: relative;
+}
+
+.accordion-select {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.accordion-title span {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.accordion-content {
+    position: relative;
+    overflow: auto;
+}
+
+.accordion-separator {
+    transition: margin 0.3s ease 0.1s;
+    -o-transition: margin 0.3s ease 0.1s;
+    -moz-transition: margin 0.3s ease 0.1s;
+    -webkit-transition: margin 0.3s ease 0.1s;
+}
+</style>
+</head>
+<body>
+<div class="accordion">
+    <ul>
+        <li>
+            <input type="radio" name="select" class="accordion-select" checked />
+            <div class="accordion-title">
+                <span>Address's</span>
+            </div>
+            <div class="accordion-content">
+                <form>
+  			<input id="addressSearch" type="text" name="searchBar" style="width: 300px;" placeholder="Please Enter Address">
+			<button type="button" onclick="searchAddress()" id="no">Search Address</button>
+		</form>	
+		<br>
+		<form>
+  			<input id="area" type="text" name="searchBar" style="width: 300px;" placeholder="Please Enter Neighborhood">
+			<button type="button" onclick="areaSearch()" id='off'>Search Neighbourhood</button>
+		</form>
+		<p id="write" style="font-size:75%;"></p>
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+        <li>
+            <input type="radio" name="select" class="accordion-select" />
+            <div class="accordion-title">
+                <span>Crime Dates</span>
+            </div>
+            <div class="accordion-content">
+		<p>Year: &nbsp &nbsp
+			<select id = "year">
+  				<option value="yr" selected>Choose a Year</option>
+				<option value="fifteen">2015</option>
+				<option value="fourteen">2014</option>
+				<option value="thirteen">2013</option>
+				<option value="twelve">2012</option>
+				<option value="eleven">2011</option>
+				<option value="ten">2010</option>
+				<option value="nine">2009</option>
+				<option value="eight">2008</option>
+				<option value="seven">2007</option>
+				<option value="six">2006</option>
+				<option value="five">2005</option>
+				<option value="four">2004</option>
+				<option value="three">2003</option>
+			</select></p>
+
+			<p><br>Month: &nbsp
+				<select id = "month">
+  					<option value="mnth" selected >Choose a Month</option>
+  					<option value="1">Jan</option>
+  					<option value="2">Feb</option>
+  					<option value="3">Mar</option>
+  					<option value="4">Apr</option>
+					<option value="5">May</option>
+					<option value="6">Jun</option>
+					<option value="7">Jul</option>
+					<option value="8">Aug</option>
+					<option value="9">Sep</option>
+					<option value="10">Oct</option>
+					<option value="11">Nov</option>
+					<option value="12">Dec</option>
+				</select> </p>
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+        <li>
+            <input type="radio" name="select" class="accordion-select" />
+            <div class="accordion-title">
+                <span>Crimes</span>
+            </div>
+            <div class="accordion-content">
+                <input id="bnecombox" type="checkbox" onclick="checkBox(this,'BNE Commercial')" checked="checked">BNE Commercial &nbsp &nbsp</input>
+		<input id="bneresbox" type="checkbox" onclick="checkBox(this,'BNE Residential/Other')" checked="checked">BNE Residential/Other</input></br>
+		<input id="mschfbox" type="checkbox" onclick="checkBox(this,'Mischief')" checked="checked">Mischief&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp&nbsp</input>
+		<input id="otbox" type="checkbox" onclick="checkBox(this,'Other Theft')" checked="checked">Other Theft</input></br>
+		<input id="tfvbox" type="checkbox" onclick="checkBox(this,'Theft from Vehicle')" checked="checked">Theft from Vehicle</input></br>
+		<input id="tovbox" type="checkbox" onclick="checkBox(this,'Theft of Vehicle')" checked="checked">Theft of Vehicle</input></br>
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+        <li>
+            <input type="radio" name="select" class="accordion-select" />
+            <div class="accordion-title">
+                <span>Housing</span>
+            </div>
+            <div class="accordion-content">
+                <select id = "house_year">
+  			<option value="yr" selected>Choose a Year</option>
+			<option value="prop2015">2015</option>
+			<option value="prop2014">2014</option>
+			<option value="prop2013">2013</option>
+			<option value="prop2012">2012</option>
+			<option value="prop2011">2011</option>
+			<option value="prop2010">2010</option>
+			<option value="prop2009">2009</option>
+			<option value="prop2008">2008</option>
+			<option value="prop2007">2007</option>
+			<option value="prop2006">2006</option>
+		</select></p>
+		<button type="button" onclick="initOverlay()" id='overlay'>Create Overlay</button>
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+    </ul>
+</div>
+</body>
+</html>
+								</form>	
+							</div>
+						</div>
+				<div style="clear: both;">&nbsp;</div>
+				</div>
+				<!-- end #content -->
+				<div id="sidebar">
+					<ul>
+						<li>
+						<h2>Description/Instructions</h2>
+							<p>Use the map correctly</p>
+						</li>
+						<li>
+							<h2>Search Address</h2>
+							
+								<form>
+  									<input id="addressSearch" type="text" name="searchBar" style="width: 300px;" placeholder="Search Box"><br>
+									<button type="button" onclick="searchAddress()" id="no">Search Address</button>
+								</form>							
+						</li>
+						<li>
+							<h2>Search Neighbourhood</h2>
+							
+								<form>
+  									<input id="area" type="text" name="searchBar" style="width: 300px;" placeholder="Search Box"><br>
+									<button type="button" onclick="areaSearch()" id='off'>Search Neighbourhood</button>
+								</form>
+								<li><p id="write"></p></li>	
+						</li>	
+						</ul>
+						<div>
+						<ul>						
+						<li>
+							<h2>Date</h2>
+								<p>Year: &nbsp &nbsp &nbsp
+								<select id = "year">
+  									<option value="yr" selected>Choose a Year</option>
+									<option value="fifteen">2015</option>
+									<option value="fourteen">2014</option>
+									<option value="thirteen">2013</option>
+									<option value="twelve">2012</option>
+									<option value="eleven">2011</option>
+									<option value="ten">2010</option>
+									<option value="nine">2009</option>
+									<option value="eight">2008</option>
+									<option value="seven">2007</option>
+									<option value="six">2006</option>
+									<option value="five">2005</option>
+									<option value="four">2004</option>
+									<option value="three">2003</option>
+								</select></p>
+
+								<p>Month: &nbsp
+								<select id = "month">
+  									<option value="mnth" selected >Choose a Month</option>
+  									<option value="1">Jan</option>
+  									<option value="2">Feb</option>
+  									<option value="3">Mar</option>
+  									<option value="4">Apr</option>
+									<option value="5">May</option>
+									<option value="6">Jun</option>
+									<option value="7">Jul</option>
+									<option value="8">Aug</option>
+									<option value="9">Sep</option>
+									<option value="10">Oct</option>
+									<option value="11">Nov</option>
+									<option value="12">Dec</option>
+								</select> </p>							
+						</li>	
+						<li>
+							<h2>Crimes</h2>
+									<input id="bnecombox" type="checkbox" onclick="checkBox(this,'BNE Commercial')" checked="checked">BNE Commercial</input></br>
+									<input id="bneresbox" type="checkbox" onclick="checkBox(this,'BNE Residential/Other')" checked="checked">BNE Residential/Other</input></br>
+									<input id="mschfbox" type="checkbox" onclick="checkBox(this,'Mischief')" checked="checked">Mischief</input></br>
+									<input id="otbox" type="checkbox" onclick="checkBox(this,'Other Theft')" checked="checked">Other Theft</input></br>
+									<input id="tfvbox" type="checkbox" onclick="checkBox(this,'Theft from Vehicle')" checked="checked">Theft from Vehicle</input></br>
+									<input id="tovbox" type="checkbox" onclick="checkBox(this,'Theft of Vehicle')" checked="checked">Theft of Vehicle</input></br>
+							<h2>Housing Data</h2>
+							<p>Year: &nbsp &nbsp &nbsp
+								<select id = "house_year">
+  									<option value="yr" selected>Choose a Year</option>
+									<option value="prop2015">2015</option>
+									<option value="prop2014">2014</option>
+									<option value="prop2013">2013</option>
+									<option value="prop2012">2012</option>
+									<option value="prop2011">2011</option>
+									<option value="prop2010">2010</option>
+									<option value="prop2009">2009</option>
+									<option value="prop2008">2008</option>
+									<option value="prop2007">2007</option>
+									<option value="prop2006">2006</option>
+								</select></p>
+							<button type="button" onclick="initOverlay()" id='overlay'>Create Overlay</button>
+						</li>
+					</ul>
+					</div>
+				</div>
+				<!-- end #sidebar -->
+				<div style="clear: both;">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+	<!-- end #page -->
+<!-- end #footer -->
+
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVlxwozU_FwUiwQQZA_kaQ_t-BJWKp2pE&callback=initMap"></script>
+<script type = "text/javascript" src = "https://code.jquery.com/jquery-1.6.2.min.js"></script>
+<script src = "fetchData.js"></script>
+<script src = "searchAddress.js"></script>
+
+</body>
+</html>

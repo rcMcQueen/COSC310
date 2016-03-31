@@ -7,6 +7,7 @@ body {
 	font-size: 12pt;
 	font-weight: 300;
 	color: #181B20;
+	overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -70,7 +71,7 @@ a:hover {
 	width: 980px;
 	height: 100px;
 	margin: 0px auto;
-	padding: 80px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
 	color: #3B3B3B;
 }
 
@@ -249,7 +250,7 @@ a:hover {
 }
 
 .post .resetbutton {
-	padding:0px 0px 0px 280px;
+	padding:0px 0px 0px 0px;
 }
 
 .links {
@@ -364,6 +365,181 @@ a:hover {
 }
 
 #map {
-	width: 710px;
+	width: 1000px;
 	height: 550px;
 }
+
+/* Accordian */
+
+.accordion {
+    -webkit-box-shadow: 0px 75px 35px -55px rgba(10, 30, 65, 0.6);
+    -moz-box-shadow: 0px 75px 35px -55px rgba(10, 30, 65, 0.6);
+    box-shadow: 0px 75px 35px -55px rgba(10, 30, 65, 0.6);
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: #505050;
+    border-style: solid;
+    border-width: 0px;
+    border-radius: 8px;
+    margin: 0 auto;
+    height: 364px;
+    width: 300px;
+}
+
+.accordion > ul > li,
+.accordion-title,
+.accordion-content,
+.accordion-separator {
+    float: none;
+}
+
+.accordion > ul > li {
+    background-color: #1f1f1f;
+    margin-right: -0px;
+    margin-bottom: -200px;
+}
+
+.accordion-select:checked ~ .accordion-separator {
+    margin-right: 0px;
+    margin-bottom: 200px;
+}
+
+.accordion-title,
+.accordion-select  {
+    background-color: #2d2d2d;
+    color: #ffffff;
+    width: 300px;
+    height: 40px;
+    font-size: 15px;
+}
+
+.accordion-title span {
+    margin-bottom: 20px; 
+    margin-left: 20px;
+}
+
+.accordion-select:hover ~ .accordion-title,
+.accordion-select:checked ~ .accordion-title {
+    background-color: #3068cc;
+}
+
+.accordion-title span  {	
+    transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -ms-writing-mode: lr-tb;
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+    margin-bottom: 0px;
+    line-height: 40px;
+}
+
+.accordion-content {
+    background-color: #3e3e3e;
+    color: #f5f2f0;
+    height: 160px;
+    width: 260px;
+    padding: 20px;
+}
+
+.accordion-title,
+.accordion-select:checked ~ .accordion-content {
+    margin-right: 1px;
+    margin-bottom: 1px;
+}
+
+/* Do not change following properties, they aren't 
+generated automatically and are common for each slider. */
+.accordion {
+    overflow: hidden;
+}
+
+.accordion > ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    width: 101%;
+}
+
+.accordion > ul > li,
+.accordion-title {
+    position: relative;
+}
+
+.accordion-select {
+    cursor: pointer;
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    margin: 0;
+    z-index: 1;
+}
+
+.accordion-title span {
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    white-space: nowrap;
+}
+
+.accordion-content {
+    position: relative;
+    overflow: auto;
+}
+
+.accordion-separator {
+    transition: margin 0.3s ease 0.1s;
+    -o-transition: margin 0.3s ease 0.1s;
+    -moz-transition: margin 0.3s ease 0.1s;
+    -webkit-transition: margin 0.3s ease 0.1s;
+}
+
+#brand {
+	float: left;
+	line-height: 50px;
+	color: #E5DAC0;
+	font-size: 25px;
+	font-weight: bolder;
+   margin: 0 0 0 6px;
+}
+nav { width: 100%; text-align: center; }
+nav a { 
+	display: block; 
+	padding: 15px 0;
+	border-bottom: 1px solid #C3AA6E;
+	color: #F0EADC;
+}
+nav a:hover { background: #E5DAC0; color: #FFF; }
+nav li:last-child a { border-bottom: none; }
+
+/*-----------------------------------------*/
+
+.menu {
+	z-index:100;
+	width: 240px;
+	height: 100%;
+	position: absolute;
+	background: #D9C9A3;
+	right: -240px;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+	
+}
+.menu-icon {
+	padding: 10px 20px;
+	background: #E5DAC0;
+	color: #987D3E;
+	cursor: pointer;
+	float: center;
+	margin: 0px 0px 0 0;
+	border-radius: 5px;
+}
+#menuToggle { display: none; }
+
+#menuToggle:checked ~ .menu { position: absolute; right: 0; }
+
+li { list-style-type: none; }
