@@ -736,6 +736,72 @@ function initOverlay() {
         position: {lat: 49.245160, lng: -123.120786},
         content: "This is South Cambie the average house price here is $710 693 and the average rent is $1067/month"
     }));
+flightPath.addListener('click', function() {  //make the info windows pop up when overley clicked on
+        infowindow.open(map,flightPath);
+    });
+    flightPath2.addListener('click', function() {
+        infowindow2.open(map,flightPath2);
+    });
+    flightPath3.addListener('click', function() {
+        infowindow3.open(map,flightPath3);
+    });
+    flightPath4.addListener('click', function() {
+        infowindow4.open(map,flightPath4);
+    });
+    flightPath5.addListener('click', function() {
+        infowindow5.open(map,flightPath5);
+    });
+    flightPath6.addListener('click', function() {
+        infowindow6.open(map,flightPath6);
+    });
+    flightPath7.addListener('click', function() {
+        infowindow7.open(map,flightPath7);
+    });
+    flightPath8.addListener('click', function() {
+        infowindow8.open(map,flightPath8);
+    });
+    flightPath9.addListener('click', function() {
+        infowindow9.open(map,flightPath9);
+    });
+    flightPath10.addListener('click', function() {
+        infowindow10.open(map,flightPath10);
+    });
+    flightPath11.addListener('click', function() {
+        infowindow11.open(map,flightPath11);
+    });
+    flightPath12.addListener('click', function() {
+        infowindow12.open(map,flightPath12);
+    });
+    flightPath13.addListener('click', function() {
+        infowindow13.open(map,flightPath13);
+    });
+    flightPath14.addListener('click', function() {
+        infowindow14.open(map,flightPath14);
+    });
+    flightPath15.addListener('click', function() {
+        infowindow15.open(map,flightPath15);
+    });
+    flightPath16.addListener('click', function() {
+        infowindow16.open(map,flightPath16);
+    });
+    flightPath17.addListener('click', function() {
+        infowindow17.open(map,flightPath17);
+    });
+    flightPath18.addListener('click', function() {
+        infowindow18.open(map,flightPath18);
+    });
+    flightPath19.addListener('click', function() {
+        infowindow19.open(map,flightPath19);
+    });
+    flightPath20.addListener('click', function() {
+        infowindow20.open(map,flightPath20);
+    });
+    flightPath21.addListener('click', function() {
+        infowindow21.open(map,flightPath21);
+    });
+    flightPath22.addListener('click', function() {
+        infowindow22.open(map,flightPath22);
+    });
 
 
 }
