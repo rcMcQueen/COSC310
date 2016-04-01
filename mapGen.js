@@ -653,7 +653,7 @@ function initOverlay() {
 
     var myTrip = [marpoleTrip, sunsetTrip, oakridgeTrip, kessidaleTrip, kensingtonTrip, victoriaTrip, killarneyTrip, renfrewTrip, hastingsTrip, grandTrip, stratTrip, dunbarTrip, greyTrip, kitsTrip, westTrip, dtTrip, rileyTrip, arbTrip, shaughTrip, fairTrip, mountTrip, camTrip];
 
-    for (var i = 0; i < 22; i++) {
+    /* for (var i = 0; i < 22; i++) {
         flightPath[i] = new google.maps.Polygon({
             path: myTrip[i],
             strokeColor: "#0066CC",
@@ -661,8 +661,186 @@ function initOverlay() {
             strokeWeight: 2,
             fillColor: "#0066CC",
             fillOpacity: 0.4
+        });  
+   }  */
+
+flightPath[0] = new google.maps.Polygon({
+            path: myTrip[0],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#b3b3ff",
+            fillOpacity: 0.4
         });
-    }
+flightPath[1] = new google.maps.Polygon({
+            path: myTrip[1],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#4d4dff",
+            fillOpacity: 0.4
+        });
+flightPath[2] = new google.maps.Polygon({
+            path: myTrip[2],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#000099",
+            fillOpacity: 0.4
+        });
+flightPath[3] = new google.maps.Polygon({
+            path: myTrip[3],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#000080",
+            fillOpacity: 0.4
+        });
+flightPath[4] = new google.maps.Polygon({
+            path: myTrip[4],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#8080ff",
+            fillOpacity: 0.4
+        });
+flightPath[5] = new google.maps.Polygon({
+            path: myTrip[5],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#0000ff",
+            fillOpacity: 0.4
+        });
+flightPath[6] = new google.maps.Polygon({
+            path: myTrip[6],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#3333ff",
+            fillOpacity: 0.4
+        });
+flightPath[7] = new google.maps.Polygon({
+            path: myTrip[7],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#e6e6ff",
+            fillOpacity: 0.4
+        });
+flightPath[8] = new google.maps.Polygon({
+            path: myTrip[8],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#6666ff",
+            fillOpacity: 0.4
+        });
+flightPath[9] = new google.maps.Polygon({
+            path: myTrip[9],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#9999ff",
+            fillOpacity: 0.4
+        });
+flightPath[10] = new google.maps.Polygon({
+            path: myTrip[10],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#ffffff",
+            fillOpacity: 0.4
+        });
+flightPath[11] = new google.maps.Polygon({
+            path: myTrip[11],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#00001a",
+            fillOpacity: 0.4
+        });
+flightPath[12] = new google.maps.Polygon({
+            path: myTrip[12],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#000033",
+            fillOpacity: 0.4
+        });
+flightPath[13] = new google.maps.Polygon({
+            path: myTrip[13],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#00004d",
+            fillOpacity: 0.4
+        });
+flightPath[14] = new google.maps.Polygon({
+            path: myTrip[14],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#0000e6",
+            fillOpacity: 0.4
+        });
+flightPath[15] = new google.maps.Polygon({
+            path: myTrip[15],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#ccccff",
+            fillOpacity: 0.4
+        });
+flightPath[16] = new google.maps.Polygon({
+            path: myTrip[16],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#1a1aff",
+            fillOpacity: 0.4
+        });
+flightPath[17] = new google.maps.Polygon({
+            path: myTrip[17],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#000066",
+            fillOpacity: 0.4
+        });
+flightPath[18] = new google.maps.Polygon({
+            path: myTrip[18],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#000000",
+            fillOpacity: 0.4
+        });
+flightPath[19] = new google.maps.Polygon({
+            path: myTrip[19],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#ffffff",
+            fillOpacity: 0.4
+        });
+flightPath[20] = new google.maps.Polygon({
+            path: myTrip[20],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#0000b3",
+            fillOpacity: 0.4
+        });
+flightPath[21] = new google.maps.Polygon({
+            path: myTrip[21],
+            strokeColor: "#0066CC",
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: "#0000cc",
+            fillOpacity: 0.4
+        });
+
 
     for (var i = 0; i < 22; i++) {
         flightPath[i].setMap(map);
@@ -736,7 +914,8 @@ function initOverlay() {
         position: {lat: 49.245160, lng: -123.120786},
         content: "This is South Cambie the average house price here is $710 693 and the average rent is $1067/month"
     }));
-flightPath.addListener('click', function() {  //make the info windows pop up when overley clicked on
+
+flightPath.addListener('click', function() {      //make the info windows pop up when overley clicked on
         infowindow.open(map,flightPath);
     });
     flightPath2.addListener('click', function() {
