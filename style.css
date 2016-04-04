@@ -393,7 +393,7 @@ a:hover {
 }
 
 .accordion > ul > li {
-    background-color: #1f1f1f;
+    background-color: #000000;
     margin-right: -0px;
     margin-bottom: -200px;
 }
@@ -405,11 +405,12 @@ a:hover {
 
 .accordion-title,
 .accordion-select  {
-    background-color: #2d2d2d;
-    color: #ffffff;
+    background-color: #ffa31a;
+    color: #000000;
     width: 300px;
     height: 40px;
     font-size: 15px;
+    font-weight: bold;
 }
 
 .accordion-title span {
@@ -419,7 +420,7 @@ a:hover {
 
 .accordion-select:hover ~ .accordion-title,
 .accordion-select:checked ~ .accordion-title {
-    background-color: #3068cc;
+    background-color: #e67300;
 }
 
 .accordion-title span  {	
@@ -434,8 +435,8 @@ a:hover {
 }
 
 .accordion-content {
-    background-color: #3e3e3e;
-    color: #f5f2f0;
+    background-color: #E0E0E0 ;
+    color: #282828 ;
     height: 160px;
     width: 260px;
     padding: 20px;
@@ -531,8 +532,8 @@ nav li:last-child a { border-bottom: none; }
 }
 .menu-icon {
 	padding: 10px 20px;
-	background: #E5DAC0;
-	color: #987D3E;
+	background: #E8E8E8 ;
+	color: #000000 ;
 	cursor: pointer;
 	float: center;
 	margin: 0px 0px 0 0;
