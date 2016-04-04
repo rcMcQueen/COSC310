@@ -1001,8 +1001,38 @@ var infowindow22 = new google.maps.InfoWindow({
     flightPath[21].addListener('click', function() {
         infowindow22.open(map,flightPath[21]);
     });
-
-
 }
+
+function stat(){
+if(vaule== "three"){
+document.getElementById("stat").innerHTML="Do not have data available for 2003";}
+else if(vaule== "four"){
+document.getElementById("stat").innerHTML="Do not have data available for 2004";}
+else if(vaule== "five"){
+document.getElementById("stat").innerHTML="Do not have data available for 2005";}
+else if(vaule== "six"){
+document.getElementById("stat").innerHTML="Average house price in 2006 is $722603.44";}
+else if(vaule== "seven"){
+document.getElementById("stat").innerHTML="Average house price in 2007 is $881971.39";}
+else if(vaule=="eight"){
+document.getElementById("stat").innerHTML="Average house price in 2008 is $1011046.14";}
+else if(vaule== "nine"){
+document.getElementById("stat").innerHTML="Average house price in 2009 is $1003140.04";}
+else if(vaule== "ten"){
+document.getElementById("stat").innerHTML="Average house price in 2010 is $1004851.47";}
+else if(vaule== "eleven"){
+document.getElementById("stat").innerHTML="Average house price in 2011 is $1121884.62";}
+else if(vaule== "twelve"){
+document.getElementById("stat").innerHTML="Average house price in 2012 is $1261141.86";}
+else if(vaule== "thirteen"){
+document.getElementById("stat").innerHTML="Average house price in 2013 is $1277472.36";}
+else if(vaule== "fourteen"){
+document.getElementById("stat").innerHTML="Average house price in 2014 is $1293579.93";}
+else{
+document.getElementById("stat").innerHTML=" ";}
+}
+
+
+
 //http://www.vancouversun.com/business/vanmap/6235770/story.html?__lsa=c6a3-24c3
 //http://www.vancouversun.com/news/vanmap/6236004/story.html and
