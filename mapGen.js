@@ -1007,25 +1007,25 @@ function stat() {
     document.getElementById('stat').innerHTML = "";
     var work = document.getElementById('ye').value.toString();
 if(work== "2006"){
-document.getElementById("stat").innerHTML="Average house price in 2006 is $722603.44";}
+document.getElementById("stat").innerHTML="Average house price in 2006 is $722,603.44";}
 else if(work== "2007"){
-document.getElementById("stat").innerHTML="Average house price in 2007 is $881971.39";}
+document.getElementById("stat").innerHTML="Average house price in 2007 is $881,971.39";}
 else if(work=="2008"){
-document.getElementById("stat").innerHTML="Average house price in 2008 is $1011046.14";}
+document.getElementById("stat").innerHTML="Average house price in 2008 is $1,011,046.14";}
 else if(work== "2009"){
-document.getElementById("stat").innerHTML="Average house price in 2009 is $1003140.04";}
+document.getElementById("stat").innerHTML="Average house price in 2009 is $1,003,140.04";}
 else if(work== "2010"){
-document.getElementById("stat").innerHTML="Average house price in 2010 is $1004851.47";}
+document.getElementById("stat").innerHTML="Average house price in 2010 is $1,004,851.47";}
 else if(work== "2011"){
-document.getElementById("stat").innerHTML="Average house price in 2011 is $1121884.62";}
+document.getElementById("stat").innerHTML="Average house price in 2011 is $1,121,884.62";}
 else if(work== "2012"){
-document.getElementById("stat").innerHTML="Average house price in 2012 is $1261141.86";}
+document.getElementById("stat").innerHTML="Average house price in 2012 is $1,261,141.86";}
 else if(work== "2013"){
-document.getElementById("stat").innerHTML="Average house price in 2013 is $1277472.36";}
+document.getElementById("stat").innerHTML="Average house price in 2013 is $1,277,472.36";}
 else if(work== "2014"){
-document.getElementById("stat").innerHTML="Average house price in 2014 is $1293579.93";}
+document.getElementById("stat").innerHTML="Average house price in 2014 is $1,293,579.93";}
 else if(work== "2015"){
-document.getElementById("stat").innerHTML="Average house price in 2015 is $1398866.98";}
+document.getElementById("stat").innerHTML="Average house price in 2015 is $1,398,866.98";}
 else{document.getElementById("stat").innerHTML=" ";}
 }
 
