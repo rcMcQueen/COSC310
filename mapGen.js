@@ -131,6 +131,7 @@ function areaSearch() {
 }
 
 function initOverlay() {
+document.getElementById("ins").innerHTML="Prices go from most expensive to least from red to yellow to blue, darker to lighter.";
     var x = {
         lat: 49.248,
         lng: -123.1207
@@ -653,23 +654,13 @@ function initOverlay() {
 
     var myTrip = [marpoleTrip, sunsetTrip, oakridgeTrip, kessidaleTrip, kensingtonTrip, victoriaTrip, killarneyTrip, renfrewTrip, hastingsTrip, grandTrip, stratTrip, dunbarTrip, greyTrip, kitsTrip, westTrip, dtTrip, rileyTrip, arbTrip, shaughTrip, fairTrip, mountTrip, camTrip];
 
-    /* for (var i = 0; i < 22; i++) {
-        flightPath[i] = new google.maps.Polygon({
-            path: myTrip[i],
-            strokeColor: "#0066CC",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#0066CC",
-            fillOpacity: 0.4
-        });  
-   }  */
 
 flightPath[0] = new google.maps.Polygon({
             path: myTrip[0],
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#b3b3ff",
+            fillColor: "#2e2eb8",
             fillOpacity: 0.4
         });
 flightPath[1] = new google.maps.Polygon({
@@ -677,7 +668,7 @@ flightPath[1] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#4d4dff",
+            fillColor: "#9fff80",
             fillOpacity: 0.4
         });
 flightPath[2] = new google.maps.Polygon({
@@ -685,7 +676,7 @@ flightPath[2] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#000099",
+            fillColor: "#ffff1a",
             fillOpacity: 0.4
         });
 flightPath[3] = new google.maps.Polygon({
@@ -693,7 +684,7 @@ flightPath[3] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#000080",
+            fillColor: "#e6e600",
             fillOpacity: 0.4
         });
 flightPath[4] = new google.maps.Polygon({
@@ -701,7 +692,7 @@ flightPath[4] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#8080ff",
+            fillColor: "#191966",
             fillOpacity: 0.4
         });
 flightPath[5] = new google.maps.Polygon({
@@ -709,7 +700,7 @@ flightPath[5] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#0000ff",
+            fillColor: "#39e600",
             fillOpacity: 0.4
         });
 flightPath[6] = new google.maps.Polygon({
@@ -717,7 +708,7 @@ flightPath[6] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#3333ff",
+            fillColor: "#79ff4d",
             fillOpacity: 0.4
         });
 flightPath[7] = new google.maps.Polygon({
@@ -725,7 +716,7 @@ flightPath[7] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#e6e6ff",
+            fillColor: "#7070db",
             fillOpacity: 0.4
         });
 flightPath[8] = new google.maps.Polygon({
@@ -733,7 +724,7 @@ flightPath[8] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#6666ff",
+            fillColor: "#c6ffb3",
             fillOpacity: 0.4
         });
 flightPath[9] = new google.maps.Polygon({
@@ -741,7 +732,7 @@ flightPath[9] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#9999ff",
+            fillColor: "#24248f",
             fillOpacity: 0.4
         });
 flightPath[10] = new google.maps.Polygon({
@@ -749,7 +740,7 @@ flightPath[10] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#ffffff",
+            fillColor: "#c2c2f0",
             fillOpacity: 0.4
         });
 flightPath[11] = new google.maps.Polygon({
@@ -757,7 +748,7 @@ flightPath[11] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#00001a",
+            fillColor: "#ff1a1a",
             fillOpacity: 0.4
         });
 flightPath[12] = new google.maps.Polygon({
@@ -765,7 +756,7 @@ flightPath[12] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#000033",
+            fillColor: "#ff4d4d",
             fillOpacity: 0.4
         });
 flightPath[13] = new google.maps.Polygon({
@@ -773,7 +764,7 @@ flightPath[13] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#00004d",
+            fillColor: "#ff8080",
             fillOpacity: 0.4
         });
 flightPath[14] = new google.maps.Polygon({
@@ -781,7 +772,7 @@ flightPath[14] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#0000e6",
+            fillColor: "#ffffb3",
             fillOpacity: 0.4
         });
 flightPath[15] = new google.maps.Polygon({
@@ -789,7 +780,7 @@ flightPath[15] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#ccccff",
+            fillColor: "#4747d1",
             fillOpacity: 0.4
         });
 flightPath[16] = new google.maps.Polygon({
@@ -797,7 +788,7 @@ flightPath[16] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#1a1aff",
+            fillColor: "#53ff1a",
             fillOpacity: 0.4
         });
 flightPath[17] = new google.maps.Polygon({
@@ -805,7 +796,7 @@ flightPath[17] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#000066",
+            fillColor: "#ffb3b3",
             fillOpacity: 0.4
         });
 flightPath[18] = new google.maps.Polygon({
@@ -813,7 +804,7 @@ flightPath[18] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#000000",
+            fillColor: "#e60000",
             fillOpacity: 0.4
         });
 flightPath[19] = new google.maps.Polygon({
@@ -821,7 +812,7 @@ flightPath[19] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#ffffff",
+            fillColor: "#9999e6",
             fillOpacity: 0.4
         });
 flightPath[20] = new google.maps.Polygon({
@@ -829,7 +820,7 @@ flightPath[20] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#0000b3",
+            fillColor: "#ffff4d",
             fillOpacity: 0.4
         });
 flightPath[21] = new google.maps.Polygon({
@@ -837,7 +828,7 @@ flightPath[21] = new google.maps.Polygon({
             strokeColor: "#0066CC",
             strokeOpacity: 0.8,
             strokeWeight: 2,
-            fillColor: "#0000cc",
+            fillColor: "#ffff80",
             fillOpacity: 0.4
         });
 
