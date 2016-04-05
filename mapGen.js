@@ -1003,29 +1003,32 @@ var infowindow22 = new google.maps.InfoWindow({
     });
 }
 
-function stat(){
-if(work== "prop2006"){
+function stat() {
+    document.getElementById('stat').innerHTML = "";
+    var work = document.getElementById('ye').value.toString();
+if(work== "2006"){
 document.getElementById("stat").innerHTML="Average house price in 2006 is $722603.44";}
-else if(work== "prop2007"){
+else if(work== "2007"){
 document.getElementById("stat").innerHTML="Average house price in 2007 is $881971.39";}
-else if(work=="prop2008"){
+else if(work=="2008"){
 document.getElementById("stat").innerHTML="Average house price in 2008 is $1011046.14";}
-else if(work== "prop2009"){
+else if(work== "2009"){
 document.getElementById("stat").innerHTML="Average house price in 2009 is $1003140.04";}
-else if(work== "prop2010"){
+else if(work== "2010"){
 document.getElementById("stat").innerHTML="Average house price in 2010 is $1004851.47";}
-else if(work== "prop2011"){
+else if(work== "2011"){
 document.getElementById("stat").innerHTML="Average house price in 2011 is $1121884.62";}
-else if(work== "prop2012"){
+else if(work== "2012"){
 document.getElementById("stat").innerHTML="Average house price in 2012 is $1261141.86";}
-else if(work== "prop2013"){
+else if(work== "2013"){
 document.getElementById("stat").innerHTML="Average house price in 2013 is $1277472.36";}
-else if(work== "prop2014"){
+else if(work== "2014"){
 document.getElementById("stat").innerHTML="Average house price in 2014 is $1293579.93";}
-else if(work== "prop2015"){
+else if(work== "2015"){
 document.getElementById("stat").innerHTML="Average house price in 2015 is $1398866.98";}
 else{document.getElementById("stat").innerHTML=" ";}
 }
+
 
 
 

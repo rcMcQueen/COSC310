@@ -107,20 +107,11 @@
                 <span>Housing</span>
             </div>
             <div class="accordion-content">
-	
-                <select id = "house_year" name="work" onclick="stat()">
-  			<option value="yr" selected>Choose a Year</option>
-			<option value="prop2015">2015</option>
-			<option value="prop2014">2014</option>
-			<option value="prop2013">2013</option>
-			<option value="prop2012">2012</option>
-			<option value="prop2011">2011</option>
-			<option value="prop2010">2010</option>
-			<option value="prop2009">2009</option>
-			<option value="prop2008">2008</option>
-			<option value="prop2007">2007</option>
-			<option value="prop2006">2006</option>
-		</select></p><br>
+		<form>
+  			<input id="ye" type="text" name="searchBar" style="width: 250px;" placeholder="Enter a year from 2006 to 2015">
+			<button type="button" onclick="stat()" >Average price of houses</button>
+		</form>
+	</p><br>
 		<button type="button" onclick="initOverlay()" id='overlay'>Create Overlay</button>
             </div>
             <div class="accordion-separator"></div>
