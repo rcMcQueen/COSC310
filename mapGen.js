@@ -131,7 +131,7 @@ function areaSearch() {
 }
 
 function initOverlay() {
-document.getElementById("ins").innerHTML="Prices go from most expensive to least from red to yellow to blue, darker to lighter.";
+//document.getElementById("ins").innerHTML="Prices go from most expensive to least from red to yellow to blue, darker to lighter.";
     var x = {
         lat: 49.248,
         lng: -123.1207
