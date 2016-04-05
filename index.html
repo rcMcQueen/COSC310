@@ -24,8 +24,21 @@
 	<ul>
 <div class="accordion">
     <ul>
+	<li>
+            <input type="radio" name="select" class="accordion-select" checked>
+            <div class="accordion-title">
+                <span>Instructions</span>
+            </div>
+            <div class="accordion-content">
+			<p style="font-size:10px">Use the options below to adjust displayed crime and house data</p><br>
+			<p style="font-size:10px">The house overlay goes from green(high income) to red(low income)</p><br>
+			<p style="font-size:10px">Use the reset button below the map to reset the map</p>
+            </div>
+            <div class="accordion-separator"></div>
+        </li>
+
         <li>
-            <input type="radio" name="select" class="accordion-select" checked />
+            <input type="radio" name="select" class="accordion-select" />
             <div class="accordion-title">
                 <span>Address's</span>
             </div>
@@ -102,7 +115,7 @@
             <div class="accordion-separator"></div>
         </li>
         <li>
-            <input type="radio" name="select" class="accordion-select" />
+            <input type="radio" name="select" class="accordion-select">
             <div class="accordion-title">
                 <span>Housing</span>
             </div>
@@ -112,7 +125,7 @@
 			<button type="button" onclick="stat()" >Average price of houses</button>
 		</form>
 	</p><br>
-<div id="stat"><p></p></div><br>
+<div id="stat"><p></p></div>
 		<button type="button" onclick="initOverlay()" id='overlay'>Create Overlay</button><br>
 	<p id="ins"></p>
             </div>
