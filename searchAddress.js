@@ -27,39 +27,44 @@ function searchAddress() {
     // transform the strings into standable text, ex: "asd" -> asd
     //set the infoString to the relevant information regarding the crime based on the current iteration
     var addressObj = JSON.parse(rows);
-    var infoString = '<p>';
-    for (var i = 0; i < addressObj.length; i++) {
-        infoString += addressObj[i].TYPE + " " + addressObj[i].YEAR + " "
-            + addressObj[i].MONTH + " " + address + " "
-            + addressObj[i].N_HOOD + "<br>";
-    }
-    infoString += "</p>"
-    address +=" vancouver bc canada";
-    // use the geocode to find the lat and long variables and create a marker
-    // with the information about the crime at that address
-    geocoder.geocode({address: address}, function (results, status) {
-        if (status == google.maps.GeocoderStatus.OK) {
-            var result = results[0].geometry.location;
-            var mapOptions = {
-                center: result,
-                zoom: 15,
-                mapTypeId: google.maps.MapTypeId.TERRAIN
-            }
-            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
-            var marker = new google.maps.Marker({
-                map: map,
-                position: result
-            });
-            var infowindow = new google.maps.InfoWindow({
-                content: infoString
-            });
-            marker.addListener('click', function () {
-                infowindow.open(map, marker);
-            });
-        } else {
-            alert('Geocode was not successful for the following reason: '
-                + status);
-        }
+    if(addressObj.length > 0) {
+        var infoString = '<p>';
+        for (var i = 0; i < addressObj.length; i++) {
+            infoString += addressObj[i].TYPE + " " + addressObj[i].YEAR + " "
+                + addressObj[i].MONTH + " " + address + " "
+                + addressObj[i].N_HOOD + "<br>";
+            infoString += "</p>"
+            address = adrressObj[0].HUNDRED_BLOCK + " vancouver bc canada";
+            // use the geocode to find the lat and long variables and create a marker
+            // with the information about the crime at that address
+            geocoder.geocode({address: address}, function (results, status) {
+                if (status == google.maps.GeocoderStatus.OK) {
+                    var result = results[0].geometry.location;
+                    var mapOptions = {
+                        center: result,
+                        zoom: 15,
+                        mapTypeId: google.maps.MapTypeId.TERRAIN
+                    }
+                    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+                    var marker = new google.maps.Marker({
+                        map: map,
+                        position: result
+                    });
+                    var infowindow = new google.maps.InfoWindow({
+                        content: infoString
+                    });
+                    marker.addListener('click', function () {
+                        infowindow.open(map, marker);
+                    });
+                } else {
+                    alert('Geocode was not successful for the following reason: '
+                        + status);
+                }
 
-    });
+            });
+        }
+    }
+    else{
+    window.alert("No crime at that address");
+    }
 }

@@ -23,6 +23,35 @@ var shaugh = new Array(35);
 var fair = new Array(15);
 var mount = new Array(29);
 var cam = new Array(30);
+var markers = [];
+var infowindows = [];
+var currentIcon;
+var icons = {
+    TheftOfVehicle: {
+        url: "Icons/theftOfVehicle.png",
+        scaledSize: new google.maps.Size(20,20)
+    },
+    TheftFromVehicle: {
+        url: "Icons/theftFromVehicle.jpg",
+        scaledSize: new google.maps.Size(20,20)
+    },
+    Mischief: {
+        url: "Icons/mischief.png",
+        scaledSize: new google.maps.Size(20,20)
+    },
+    bneCom: {
+        url: "Icons/bneCom.png",
+        scaledSize: new google.maps.Size(20,20)
+    },
+    bneRes: {
+        url: "Icons/bneRes.png",
+        scaledSize: new google.maps.Size(20,20)
+    },
+    otherTheft: {
+        url: "Icons/otherTheft.png",
+        scaledSize: new google.maps.Size(20,20)
+    }
+};
 
 function initMap() {
     var mapDiv = document.getElementById('map');
@@ -1019,7 +1048,70 @@ else if(work== "2015"){
 document.getElementById("stat").innerHTML="Average house price in 2015 is $1,398,866.98";}
 else{document.getElementById("stat").innerHTML=" ";}
 }
+function placeMarkers(yearObj){
+    //deletes any current markers from the map
+    deleteMarkers();
+    var i = 0;
+    //to keep map unclustered limit data to 2500 icons
+    //set infowindow to the information about the current crime at the state of the for loop
+    //BUG: infowindow not displaying the correct information, instead displaying information about last window only
+    while(i < 5) {
+        var type = yearObj[i].TYPE;
+        var content = "<p>" + yearObj[i].TYPE + " " + yearObj[i].MONTH +
+            " " + yearObj[i].HUNDRED_BLOCK +
+            " " + yearObj[i].N_HOOD + "</p>";
+        var position = {lat: yearObj[i].LAT, lng:yearObj[i].LONG};
+        /* if(type == "Theft from Vehicle"){
+         currentIcon = icons.TheftFromVehicle
+         }
+         else if(type == "Theft of Vehicle"){
+         currentIcon = icons.TheftOfVehicle
+         }
+         else if(type == "Mischief"){
+         currentIcon = icons.Mischief
+         }
+         else if(type == "BNE Commercial"){
+         currentIcon = icons.bneCom
+         }
+         else if(type == "BNE Residential/Commercial"){
+         currentIcon = icons.bneRes
+         }
+         else if(type == "Other Theft"){
+         currentIcon = icons.otherTheft
+         } */
+        var marker = new google.maps.Marker({
+            map: map,
+            // icon: currentIcon,
+            position: location
+        });
+        createdMarkers.push({Marker:marker, Type:type});
 
+        infowindows.push(new google.maps.InfoWindow({
+                content : content
+            })
+        );
+
+        marker.addListener('click', function () {
+            infoWindows.last().open(map, marker);
+        });
+        i++;
+    }
+    google.maps.event.addListener(map, 'click', function() {
+        infoWindow.close();
+    });
+}
+
+// Deletes all markers in the array by removing references to them.
+function deleteMarkers() {
+    for (var i = 0; i < createdMarkers.length; i++) {
+        createdMarkers[i].Marker.setMap(null);
+    }
+    createdMarkers = [];
+}
+
+function getMarkerList(){
+    return createdMarkers;
+}
 
 
 
