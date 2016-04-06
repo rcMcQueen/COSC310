@@ -1,7 +1,6 @@
 var yearObj;
 var createdMarkers=[];
 var houseData;
-var currentIcon;
 var icons = {
     TheftOfVehicle: {
         url: "Icons/theftOfVehicle.png",
