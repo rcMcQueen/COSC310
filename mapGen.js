@@ -1,6 +1,5 @@
 var map;
 var flightPath = [];
-var houseInfo = [];
 var marpole = new Array(6);
 var sunset = new Array(5);
 var oakridge = new Array(4);
@@ -24,7 +23,6 @@ var fair = new Array(15);
 var mount = new Array(29);
 var cam = new Array(30);
 var markers = [];
-var infowindows = [];
 var currentIcon;
 var icons = {
     TheftOfVehicle: {
@@ -1053,50 +1051,52 @@ function placeMarkers(yearObj){
     //deletes any current markers from the map
     deleteMarkers();
     var i = 0;
+    var j = Math.random()*(yearObj.length - 1);
     //to keep map unclustered limit data to 2500 icons
     //set infowindow to the information about the current crime at the state of the for loop
     //BUG: infowindow not displaying the correct information, instead displaying information about last window only
-    while(i < 5) {
-        var type = yearObj[i].TYPE;
-        var content = "<p>" + yearObj[i].TYPE + " " + yearObj[i].MONTH +
-            " " + yearObj[i].HUNDRED_BLOCK +
-            " " + yearObj[i].N_HOOD + "</p>";
-        var lat= yearObj[i].LAT;
-        var lng= yearObj[i].LONG;
+    while(i < 250){
+        j = parseInt(j);
+        var type = yearObj[j].TYPE;
+        var content = "<p>" + yearObj[j].TYPE + " " + yearObj[j].MONTH +
+            " " + yearObj[j].HUNDRED_BLOCK +
+            " " + yearObj[j].N_HOOD + "</p>";
+        var lat= yearObj[j].LAT;
+        var lng= yearObj[j].LONG;
         var position = new google.maps.LatLng(lat, lng);
-       // var icon = findIcon(type);
+        var icon = findIcon(type);
         var marker = new google.maps.Marker({
+            position: position,
             map: map,
-          //  icon: icon,
-            position: position
+            icon: icon
         });
-        createdMarkers.push({Marker: marker, Type: type});
 
-        infowindows.push(new google.maps.InfoWindow({
-                content: content
-            })
-        );
-
-        google.maps.event.addListener(marker,'click', function () {
-            infowindows[infowindows.length - 1].open(map, marker);
-        });
+        var infowindow = new google.maps.InfoWindow()
+        google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
+            return function() {
+                infowindow.setContent(content);
+                infowindow.open(map,marker);
+            };
+        })(marker,content,infowindow));
+        markers.push({Marker: marker, Type: type});
         i++;
-        google.maps.event.addListener(map, 'click', function () {
-            infowindows[infowindows.length - 1].close();
-        });
+        var j = Math.random()*(yearObj.length - 1);
     }
+    google.maps.event.addListener(map, 'click', function () {
+        infowindow.close();
+    });
+
 }
 // Deletes all markers in the array by removing references to them.
 function deleteMarkers() {
     for (var i = 0; i < createdMarkers.length; i++) {
-        createdMarkers[i].Marker.setMap(null);
+        markers[i].Marker.setMap(null);
     }
-    createdMarkers = [];
-    infowindows = [];
+    markers = [];
 }
 
 function getMarkerList(){
-    return createdMarkers;
+    return markers;
 }
 
 function findIcon(type){
@@ -1120,7 +1120,6 @@ function findIcon(type){
     }
     return currentIcon;
 }
-
 
 
 //http://www.vancouversun.com/business/vanmap/6235770/story.html?__lsa=c6a3-24c3
