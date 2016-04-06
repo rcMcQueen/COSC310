@@ -683,275 +683,275 @@ function initOverlay() {
     var myTrip = [marpoleTrip, sunsetTrip, oakridgeTrip, kessidaleTrip, kensingtonTrip, victoriaTrip, killarneyTrip, renfrewTrip, hastingsTrip, grandTrip, stratTrip, dunbarTrip, greyTrip, kitsTrip, westTrip, dtTrip, rileyTrip, arbTrip, shaughTrip, fairTrip, mountTrip, camTrip];
 
 
-flightPath[0] = new google.maps.Polygon({
-            path: myTrip[0],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#2e2eb8",
-            fillOpacity: 0.4
-        });
-flightPath[1] = new google.maps.Polygon({
-            path: myTrip[1],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#9fff80",
-            fillOpacity: 0.4
-        });
-flightPath[2] = new google.maps.Polygon({
-            path: myTrip[2],
-            strokeColor: "##D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#ffff1a",
-            fillOpacity: 0.4
-        });
-flightPath[3] = new google.maps.Polygon({
-            path: myTrip[3],
-            strokeColor: "##D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#e6e600",
-            fillOpacity: 0.4
-        });
-flightPath[4] = new google.maps.Polygon({
-            path: myTrip[4],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#191966",
-            fillOpacity: 0.4
-        });
-flightPath[5] = new google.maps.Polygon({
-            path: myTrip[5],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#39e600",
-            fillOpacity: 0.4
-        });
-flightPath[6] = new google.maps.Polygon({
-            path: myTrip[6],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#79ff4d",
-            fillOpacity: 0.4
-        });
-flightPath[7] = new google.maps.Polygon({
-            path: myTrip[7],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#7070db",
-            fillOpacity: 0.4
-        });
-flightPath[8] = new google.maps.Polygon({
-            path: myTrip[8],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#c6ffb3",
-            fillOpacity: 0.4
-        });
-flightPath[9] = new google.maps.Polygon({
-            path: myTrip[9],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#24248f",
-            fillOpacity: 0.4
-        });
-flightPath[10] = new google.maps.Polygon({
-            path: myTrip[10],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#c2c2f0",
-            fillOpacity: 0.4
-        });
-flightPath[11] = new google.maps.Polygon({
-            path: myTrip[11],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#ff1a1a",
-            fillOpacity: 0.4
-        });
-flightPath[12] = new google.maps.Polygon({
-            path: myTrip[12],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#ff4d4d",
-            fillOpacity: 0.4
-        });
-flightPath[13] = new google.maps.Polygon({
-            path: myTrip[13],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#ff8080",
-            fillOpacity: 0.4
-        });
-flightPath[14] = new google.maps.Polygon({
-            path: myTrip[14],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#ffffb3",
-            fillOpacity: 0.4
-        });
-flightPath[15] = new google.maps.Polygon({
-            path: myTrip[15],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#4747d1",
-            fillOpacity: 0.4
-        });
-flightPath[16] = new google.maps.Polygon({
-            path: myTrip[16],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#53ff1a",
-            fillOpacity: 0.4
-        });
-flightPath[17] = new google.maps.Polygon({
-            path: myTrip[17],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#ffb3b3",
-            fillOpacity: 0.4
-        });
-flightPath[18] = new google.maps.Polygon({
-            path: myTrip[18],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#e60000",
-            fillOpacity: 0.4
-        });
-flightPath[19] = new google.maps.Polygon({
-            path: myTrip[19],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#9999e6",
-            fillOpacity: 0.4
-        });
-flightPath[20] = new google.maps.Polygon({
-            path: myTrip[20],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#ffff4d",
-            fillOpacity: 0.4
-        });
-flightPath[21] = new google.maps.Polygon({
-            path: myTrip[21],
-            strokeColor: "#D1D0CE",
-            strokeOpacity: 0.8,
-            strokeWeight: 2,
-            fillColor: "#ffff80",
-            fillOpacity: 0.4
-        });
+    flightPath[0] = new google.maps.Polygon({
+        path: myTrip[0],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#2e2eb8",
+        fillOpacity: 0.4
+    });
+    flightPath[1] = new google.maps.Polygon({
+        path: myTrip[1],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#9fff80",
+        fillOpacity: 0.4
+    });
+    flightPath[2] = new google.maps.Polygon({
+        path: myTrip[2],
+        strokeColor: "##D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#ffff1a",
+        fillOpacity: 0.4
+    });
+    flightPath[3] = new google.maps.Polygon({
+        path: myTrip[3],
+        strokeColor: "##D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#e6e600",
+        fillOpacity: 0.4
+    });
+    flightPath[4] = new google.maps.Polygon({
+        path: myTrip[4],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#191966",
+        fillOpacity: 0.4
+    });
+    flightPath[5] = new google.maps.Polygon({
+        path: myTrip[5],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#39e600",
+        fillOpacity: 0.4
+    });
+    flightPath[6] = new google.maps.Polygon({
+        path: myTrip[6],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#79ff4d",
+        fillOpacity: 0.4
+    });
+    flightPath[7] = new google.maps.Polygon({
+        path: myTrip[7],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#7070db",
+        fillOpacity: 0.4
+    });
+    flightPath[8] = new google.maps.Polygon({
+        path: myTrip[8],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#c6ffb3",
+        fillOpacity: 0.4
+    });
+    flightPath[9] = new google.maps.Polygon({
+        path: myTrip[9],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#24248f",
+        fillOpacity: 0.4
+    });
+    flightPath[10] = new google.maps.Polygon({
+        path: myTrip[10],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#c2c2f0",
+        fillOpacity: 0.4
+    });
+    flightPath[11] = new google.maps.Polygon({
+        path: myTrip[11],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#ff1a1a",
+        fillOpacity: 0.4
+    });
+    flightPath[12] = new google.maps.Polygon({
+        path: myTrip[12],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#ff4d4d",
+        fillOpacity: 0.4
+    });
+    flightPath[13] = new google.maps.Polygon({
+        path: myTrip[13],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#ff8080",
+        fillOpacity: 0.4
+    });
+    flightPath[14] = new google.maps.Polygon({
+        path: myTrip[14],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#ffffb3",
+        fillOpacity: 0.4
+    });
+    flightPath[15] = new google.maps.Polygon({
+        path: myTrip[15],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#4747d1",
+        fillOpacity: 0.4
+    });
+    flightPath[16] = new google.maps.Polygon({
+        path: myTrip[16],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#53ff1a",
+        fillOpacity: 0.4
+    });
+    flightPath[17] = new google.maps.Polygon({
+        path: myTrip[17],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#ffb3b3",
+        fillOpacity: 0.4
+    });
+    flightPath[18] = new google.maps.Polygon({
+        path: myTrip[18],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#e60000",
+        fillOpacity: 0.4
+    });
+    flightPath[19] = new google.maps.Polygon({
+        path: myTrip[19],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#9999e6",
+        fillOpacity: 0.4
+    });
+    flightPath[20] = new google.maps.Polygon({
+        path: myTrip[20],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#ffff4d",
+        fillOpacity: 0.4
+    });
+    flightPath[21] = new google.maps.Polygon({
+        path: myTrip[21],
+        strokeColor: "#D1D0CE",
+        strokeOpacity: 0.8,
+        strokeWeight: 2,
+        fillColor: "#ffff80",
+        fillOpacity: 0.4
+    });
 
 
     for (var i = 0; i < 22; i++) {
         flightPath[i].setMap(map);
     }
 
-var infowindow = new google.maps.InfoWindow({		    //info windows for each overlay section house and rent prices from 2011 censusfrom
-     position: {lat: 49.210724, lng:-123.130187},
-     content:"This is Marpole the average house price here is $520 937 and the average rent is $893/month"	   
+    var infowindow = new google.maps.InfoWindow({		    //info windows for each overlay section house and rent prices from 2011 censusfrom
+        position: {lat: 49.210724, lng:-123.130187},
+        content:"This is Marpole the average house price here is $520 937 and the average rent is $893/month"
     });
-var infowindow2 = new google.maps.InfoWindow({
-    position: {lat: 49.224486, lng: - 123.090788},
-    content:"This is Sunset the average house price here is $610 360 and the average rent is $746/month"
+    var infowindow2 = new google.maps.InfoWindow({
+        position: {lat: 49.224486, lng: - 123.090788},
+        content:"This is Sunset the average house price here is $610 360 and the average rent is $746/month"
     });
-var infowindow3 = new google.maps.InfoWindow({
-    position: {lat:49.229786 , lng:-123.116200},
-    content: "This is Oakridge the average house price here is $823 641 and the average rent is $893/month"
+    var infowindow3 = new google.maps.InfoWindow({
+        position: {lat:49.229786 , lng:-123.116200},
+        content: "This is Oakridge the average house price here is $823 641 and the average rent is $893/month"
     });
-var infowindow4 = new google.maps.InfoWindow({     
-    position: {lat: 49.234133, lng: -123.155351},
-    content:"This is Kerrisdale the average house price here is $892 971 and the average rent is $1140/month"
+    var infowindow4 = new google.maps.InfoWindow({
+        position: {lat: 49.234133, lng: -123.155351},
+        content:"This is Kerrisdale the average house price here is $892 971 and the average rent is $1140/month"
     });
-var infowindow5 = new google.maps.InfoWindow({
-    position: {lat: 49.248402, lng: -123.070127 },
-    content:"This is Kensington-cedar cottage the average house price here is $549 605 and the average rent is $839/month"
+    var infowindow5 = new google.maps.InfoWindow({
+        position: {lat: 49.248402, lng: -123.070127 },
+        content:"This is Kensington-cedar cottage the average house price here is $549 605 and the average rent is $839/month"
     });
-var infowindow6 = new google.maps.InfoWindow({
-    position: {lat: 49.218530, lng:-123.065873},
-    content:"This is Victoria-Fraserview the average house price here is $631 938 and the average rent is $907/month"
+    var infowindow6 = new google.maps.InfoWindow({
+        position: {lat: 49.218530, lng:-123.065873},
+        content:"This is Victoria-Fraserview the average house price here is $631 938 and the average rent is $907/month"
     });
-var infowindow7 = new google.maps.InfoWindow({  
-    position: {lat:49.224704 , lng:-123.041063},   
-    content:"This is Killarney the average house price here is $622 103 and the average rent is $1145/month"
+    var infowindow7 = new google.maps.InfoWindow({
+        position: {lat:49.224704 , lng:-123.041063},
+        content:"This is Killarney the average house price here is $622 103 and the average rent is $1145/month"
     });
-var infowindow8 = new google.maps.InfoWindow({
-    position: {lat: 49.241066, lng: -123.038755},
-    content:"This is Renfrew-Collingwood the average house price here is $489 073 and the average rent is $863/month"
+    var infowindow8 = new google.maps.InfoWindow({
+        position: {lat: 49.241066, lng: -123.038755},
+        content:"This is Renfrew-Collingwood the average house price here is $489 073 and the average rent is $863/month"
     });
-var infowindow9 = new google.maps.InfoWindow({
-    position: {lat: 49.281126, lng: -123.044077 },
-    content:"This is Hestings-Sunrise the average house price here is $558 230 and the average rent is $967/month"
+    var infowindow9 = new google.maps.InfoWindow({
+        position: {lat: 49.281126, lng: -123.044077 },
+        content:"This is Hestings-Sunrise the average house price here is $558 230 and the average rent is $967/month"
     });
-var infowindow10 = new google.maps.InfoWindow({
-    position: {lat: 49.269723, lng:-123.069708},
-    content:"This is Grandview-Woodland the average house price here is $543 295 and the average rent is $850/month"
+    var infowindow10 = new google.maps.InfoWindow({
+        position: {lat: 49.269723, lng:-123.069708},
+        content:"This is Grandview-Woodland the average house price here is $543 295 and the average rent is $850/month"
     });
-var infowindow11 = new google.maps.InfoWindow({
-    position: {lat: 49.273752, lng: -123.088475 },
-    content:"This is Strathcona the average house price here is $433 846 and the average rent is $608/month"
+    var infowindow11 = new google.maps.InfoWindow({
+        position: {lat: 49.273752, lng: -123.088475 },
+        content:"This is Strathcona the average house price here is $433 846 and the average rent is $608/month"
     });
-var infowindow12 = new google.maps.InfoWindow({   
-    position: {lat:49.225586 , lng:-123.201438},
-    content:"This is Dunbar-Southlands (Musqueam) the average house price here is $1 203 707 and the average rent is $1521/month"
+    var infowindow12 = new google.maps.InfoWindow({
+        position: {lat:49.225586 , lng:-123.201438},
+        content:"This is Dunbar-Southlands (Musqueam) the average house price here is $1 203 707 and the average rent is $1521/month"
     });
-var infowindow13 = new google.maps.InfoWindow({
-    position: {lat: 49.260966, lng: -123.200093},
-    content:"This is West Point Grey the average house price here is $1 042 693 and the average rent is $1330/month"
+    var infowindow13 = new google.maps.InfoWindow({
+        position: {lat: 49.260966, lng: -123.200093},
+        content:"This is West Point Grey the average house price here is $1 042 693 and the average rent is $1330/month"
     });
-var infowindow14 = new google.maps.InfoWindow({
-    position: {lat: 49.270937, lng:-123.162142 },
-    content:"This is Kitsilano the average house price here is $990 401 and the average rent is $1196/month"
+    var infowindow14 = new google.maps.InfoWindow({
+        position: {lat: 49.270937, lng:-123.162142 },
+        content:"This is Kitsilano the average house price here is $990 401 and the average rent is $1196/month"
     });
-var infowindow15 = new google.maps.InfoWindow({
-    position: {lat: 49.285646, lng: -123.130621},
-    content:"This is West End the average house price here is $677 516 and the average rent is $1278/month"
+    var infowindow15 = new google.maps.InfoWindow({
+        position: {lat: 49.285646, lng: -123.130621},
+        content:"This is West End the average house price here is $677 516 and the average rent is $1278/month"
     });
-var infowindow16 = new google.maps.InfoWindow({   
-    position: {lat: 49.271404, lng: -123.099632},
-    content:"This is Central Business District the average house price here is $494 459 and the average rent is $758/month"
+    var infowindow16 = new google.maps.InfoWindow({
+        position: {lat: 49.271404, lng: -123.099632},
+        content:"This is Central Business District the average house price here is $494 459 and the average rent is $758/month"
     });
-var infowindow17 = new google.maps.InfoWindow({  
-    position: {lat:49.240486, lng:-123.101472},
-    content:"This is Riley Park the average house price here is $623 525 and the average rent is $872/month"
+    var infowindow17 = new google.maps.InfoWindow({
+        position: {lat:49.240486, lng:-123.101472},
+        content:"This is Riley Park the average house price here is $623 525 and the average rent is $872/month"
     });
-var infowindow18 = new google.maps.InfoWindow({
-    position: {lat:49.253611 , lng:-123.160431},
-    content:"This is Arbutus Ridge the average house price here is $916 210 and the average rent is $1464/month"
+    var infowindow18 = new google.maps.InfoWindow({
+        position: {lat:49.253611 , lng:-123.160431},
+        content:"This is Arbutus Ridge the average house price here is $916 210 and the average rent is $1464/month"
     });
-var infowindow19 = new google.maps.InfoWindow({
-    position: {lat: 49.245337, lng: -123.141323},
-    content:"This is Shaughnessy the average house price here is $1 667 072 and the average rent is $1590/month"
+    var infowindow19 = new google.maps.InfoWindow({
+        position: {lat: 49.245337, lng: -123.141323},
+        content:"This is Shaughnessy the average house price here is $1 667 072 and the average rent is $1590/month"
     });
-var infowindow20 = new google.maps.InfoWindow({
-    position: {lat: 49.266031, lng: -123.128940},
-    content:"This is Fairview the average house price here is $483 231 and the average rent is $1029/month"
+    var infowindow20 = new google.maps.InfoWindow({
+        position: {lat: 49.266031, lng: -123.128940},
+        content:"This is Fairview the average house price here is $483 231 and the average rent is $1029/month"
     });
-var infowindow21 = new google.maps.InfoWindow({
-    position: {lat: 49.258266, lng: -123.108180},
-    content:"This is Mount Pleasant the average house price here is $720 114 and the average rent is $981/month"
+    var infowindow21 = new google.maps.InfoWindow({
+        position: {lat: 49.258266, lng: -123.108180},
+        content:"This is Mount Pleasant the average house price here is $720 114 and the average rent is $981/month"
     });
-var infowindow22 = new google.maps.InfoWindow({
-    position: {lat: 49.245160, lng:-123.120786},
-    content:"This is South Cambie the average house price here is $710 693 and the average rent is $1067/month"
+    var infowindow22 = new google.maps.InfoWindow({
+        position: {lat: 49.245160, lng:-123.120786},
+        content:"This is South Cambie the average house price here is $710 693 and the average rent is $1067/month"
     });
 
     flightPath[0].addListener('click', function() {  //make the info windows pop up when overley clicked on
@@ -1025,27 +1025,27 @@ var infowindow22 = new google.maps.InfoWindow({
 function stat() {
     document.getElementById('stat').innerHTML = "";
     var work = document.getElementById('ye').value.toString();
-if(work== "2006"){
-document.getElementById("stat").innerHTML="Average house price in 2006 is $722,603.44";}
-else if(work== "2007"){
-document.getElementById("stat").innerHTML="Average house price in 2007 is $881,971.39";}
-else if(work=="2008"){
-document.getElementById("stat").innerHTML="Average house price in 2008 is $1,011,046.14";}
-else if(work== "2009"){
-document.getElementById("stat").innerHTML="Average house price in 2009 is $1,003,140.04";}
-else if(work== "2010"){
-document.getElementById("stat").innerHTML="Average house price in 2010 is $1,004,851.47";}
-else if(work== "2011"){
-document.getElementById("stat").innerHTML="Average house price in 2011 is $1,121,884.62";}
-else if(work== "2012"){
-document.getElementById("stat").innerHTML="Average house price in 2012 is $1,261,141.86";}
-else if(work== "2013"){
-document.getElementById("stat").innerHTML="Average house price in 2013 is $1,277,472.36";}
-else if(work== "2014"){
-document.getElementById("stat").innerHTML="Average house price in 2014 is $1,293,579.93";}
-else if(work== "2015"){
-document.getElementById("stat").innerHTML="Average house price in 2015 is $1,398,866.98";}
-else{document.getElementById("stat").innerHTML=" ";}
+    if(work== "2006"){
+        document.getElementById("stat").innerHTML="Average house price in 2006 is $722,603.44";}
+    else if(work== "2007"){
+        document.getElementById("stat").innerHTML="Average house price in 2007 is $881,971.39";}
+    else if(work=="2008"){
+        document.getElementById("stat").innerHTML="Average house price in 2008 is $1,011,046.14";}
+    else if(work== "2009"){
+        document.getElementById("stat").innerHTML="Average house price in 2009 is $1,003,140.04";}
+    else if(work== "2010"){
+        document.getElementById("stat").innerHTML="Average house price in 2010 is $1,004,851.47";}
+    else if(work== "2011"){
+        document.getElementById("stat").innerHTML="Average house price in 2011 is $1,121,884.62";}
+    else if(work== "2012"){
+        document.getElementById("stat").innerHTML="Average house price in 2012 is $1,261,141.86";}
+    else if(work== "2013"){
+        document.getElementById("stat").innerHTML="Average house price in 2013 is $1,277,472.36";}
+    else if(work== "2014"){
+        document.getElementById("stat").innerHTML="Average house price in 2014 is $1,293,579.93";}
+    else if(work== "2015"){
+        document.getElementById("stat").innerHTML="Average house price in 2015 is $1,398,866.98";}
+    else{document.getElementById("stat").innerHTML=" ";}
 }
 function placeMarkers(yearObj){
     //deletes any current markers from the map
@@ -1055,6 +1055,9 @@ function placeMarkers(yearObj){
     //to keep map unclustered limit data to 2500 icons
     //set infowindow to the information about the current crime at the state of the for loop
     //BUG: infowindow not displaying the correct information, instead displaying information about last window only
+    var infowindow = new google.maps.InfoWindow({
+        content: ''
+    });
     while(i < 250){
         j = parseInt(j);
         var type = yearObj[j].TYPE;
@@ -1071,9 +1074,9 @@ function placeMarkers(yearObj){
             icon: icon
         });
 
-        var infowindow = new google.maps.InfoWindow()
         google.maps.event.addListener(marker,'click', (function(marker,content,infowindow){
             return function() {
+                infowindow.close();
                 infowindow.setContent(content);
                 infowindow.open(map,marker);
             };
@@ -1082,9 +1085,6 @@ function placeMarkers(yearObj){
         i++;
         var j = Math.random()*(yearObj.length - 1);
     }
-    google.maps.event.addListener(map, 'click', function () {
-        infowindow.close();
-    });
 
 }
 // Deletes all markers in the array by removing references to them.
