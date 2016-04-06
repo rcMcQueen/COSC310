@@ -34,7 +34,7 @@ function searchAddress() {
                 + addressObj[i].MONTH + " " + address + " "
                 + addressObj[i].N_HOOD + "<br>";
             infoString += "</p>"
-            address = adrressObj[0].HUNDRED_BLOCK + " vancouver bc canada";
+            address = addressObj[0].HUNDRED_BLOCK + " vancouver bc canada";
             // use the geocode to find the lat and long variables and create a marker
             // with the information about the crime at that address
             geocoder.geocode({address: address}, function (results, status) {
