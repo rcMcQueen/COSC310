@@ -1020,6 +1020,7 @@ function initOverlay() {
     flightPath[21].addListener('click', function() {
         infowindow22.open(map,flightPath[21]);
     });
+
 }
 
 function stat() {
