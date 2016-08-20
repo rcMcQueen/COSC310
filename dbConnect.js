@@ -7,10 +7,10 @@ var year;
 var month;
 var pool = mysql.createPool({
 	connectionLimit : 50, // sets maximum # of connections
-	host : 'localhost',
-	user : 'root',
-	password : 'null',
-	database : 'VanCrime',
+	host : '',
+	user : '',
+	password : '',
+	database : '',
 	debug : 'false'
 });
 
